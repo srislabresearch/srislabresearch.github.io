@@ -1,150 +1,58 @@
-/* General reset */
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-/* Header styling */
-header {
-    background-color: #333;
-    padding: 15px 0;
-    color: white;
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
 }
 
 .header-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px; /* Add padding for better spacing */
+    justify-content: space-between;
+    padding: 10px 50px;
+    background-color: #f4f4f4;
 }
 
-/* Icon styling */
 .icon {
-    width: 80px;
-    height: 80px;
-    margin-right: 20px;
+    width: 50px;
+    height: 50px;
 }
 
-/* Lab name styling */
 h1 {
-    font-size: 3rem;
-    margin-left: 10px;
-    flex-grow: 1;
-    white-space: nowrap; /* Prevent lab name from wrapping to the next line */
+    margin: 0 20px; /* Adjust the space between icon and SRIS LAB text */
 }
 
-/* Navigation styling */
-nav {
-    margin-right: 20px;
-    flex-shrink: 0; /* Prevent the navigation from shrinking */
-}
-
-.nav-links {
+nav ul {
     list-style: none;
     display: flex;
-    gap: 15px;
-    flex-wrap: wrap; /* Ensure the buttons wrap if they overflow */
 }
 
 .nav-links li {
-    display: inline-block; /* Ensure each list item behaves like an inline element */
+    padding: 0 15px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: white;
-    background-color: #0d6efd;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    white-space: nowrap; /* Prevent buttons from wrapping their text */
-}
-
-.nav-links a:hover {
-    background-color: #0056b3;
-}
-
-/* Main content styling */
-main {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
-}
-
-/* Footer styling */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-}
-
-/* Additional styles for People page */
-.person-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.person {
-    text-align: center;
-    max-width: 200px;
-}
-
-.person-img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-h2, h3 {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-/* Contact Page Styling */
-#contact-info, #prospective-students {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#contact-info h2, #prospective-students h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-}
-
-#contact-info p, #prospective-students p {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-#prospective-students ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-#prospective-students ul li {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+    color: black;
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    text-align: center;
     padding: 10px;
-    text-align: center;
+    background-color: #f4f4f4;
 }
 
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+}
