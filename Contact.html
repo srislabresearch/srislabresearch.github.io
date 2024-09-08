@@ -5,6 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - SRIS LAB</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .header-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background-color: #f4f4f4;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        /* Responsive Design */
+        @media only screen and (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+        }
+
+        /* Main content styling */
+        main {
+            padding: 2rem;
+        }
+
+        footer {
+            padding: 1rem;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -27,10 +108,10 @@
     <main>
         <section id="contact-info">
             <h2>Contact Information</h2>
-            <p><strong>Lab Director:</strong> Dr. John Smith</p>
-            <p><strong>Lab Manager:</strong> Alice Johnson</p>
+            <p><strong>Lab Director:</strong> Dr. Kewei Sha</p>
+            <p><strong>Lab Manager:</strong> Komal Cherukuri</p>
             <p><strong>Email:</strong> <a href="mailto:info@srislab.com">info@srislab.com</a></p>
-            <p><strong>Address:</strong> 123 Innovation Drive, Tech Park, Somewhere, 45678</p>
+            <p><strong>Address:</strong> University of North Texas Discovery Park, 3940 N Elm St, Denton, TX 76207</p>
         </section>
     </main>
     <footer>
