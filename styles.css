@@ -1,0 +1,78 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    padding: 15px 0;
+    color: white;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Icon styling */
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+/* Lab name styling */
+h1 {
+    font-size: 2.5rem;
+    margin-left: 10px;
+    flex-grow: 1;
+}
+
+/* Navigation styling */
+nav {
+    margin-right: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    background-color: #0d6efd;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background-color: #0056b3;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
