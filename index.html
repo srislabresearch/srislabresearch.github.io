@@ -15,6 +15,9 @@
 
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         .header-container {
@@ -24,6 +27,9 @@
             align-items: center;
             padding: 1rem;
             background-color: #f4f4f4;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto; /* Center the content */
         }
 
         .icon {
@@ -37,6 +43,8 @@
 
         nav {
             display: flex;
+            flex-grow: 1;
+            justify-content: flex-end;
         }
 
         .nav-links {
@@ -54,24 +62,58 @@
             color: #333;
         }
 
+        /* Highlight active page */
+        .nav-links a.active {
+            font-weight: bold;
+            background-color: #f4d03f;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            color: #000;
+        }
+
         /* Responsive Design */
         @media only screen and (max-width: 768px) {
             .header-container {
                 flex-direction: column;
                 align-items: flex-start;
+                padding: 1rem;
+            }
+
+            .icon {
+                width: 40px;
+                height: 40px;
             }
 
             h1 {
                 font-size: 1.5rem;
+                text-align: center;
+                width: 100%;
+            }
+
+            nav {
+                width: 100%;
             }
 
             .nav-links {
                 flex-direction: column;
+                align-items: flex-start;
                 width: 100%;
             }
 
             .nav-links li {
                 margin: 10px 0;
+            }
+
+            .nav-links a {
+                font-size: 1.2rem; /* Slightly larger font size for easier readability */
+                padding: 0.5rem;
+                width: 100%;
+                display: block;
+            }
+
+            .header-container {
+                align-items: center;
+                width: 100%;
             }
         }
 
@@ -94,7 +136,7 @@
             <h1>SRIS LAB</h1>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="people.html">People</a></li>
                     <li><a href="publication.html">Publications</a></li>
                     <li><a href="grants.html">Grants</a></li>
@@ -105,12 +147,14 @@
             </nav>
         </div>
     </header>
+
     <main>
         <section id="home">
             <h2>Welcome to SRIS LAB</h2>
             <p>Here at SRIS LAB, we focus on data science and innovative research...</p>
         </section>
     </main>
+
     <footer>
         <p>© 2024 SRIS LAB. All Rights Reserved.</p>
     </footer>
