@@ -6,7 +6,7 @@
     <title>Grants - SRIS LAB</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to your main stylesheet -->
     <style>
-        /* Basic reset and styling */
+        /* Basic reset */
         * {
             margin: 0;
             padding: 0;
@@ -15,65 +15,84 @@
 
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
         }
 
         .header-container {
             display: flex;
+            flex-direction: row;
             justify-content: space-between;
             align-items: center;
             padding: 1rem;
             background-color: #f4f4f4;
         }
 
-        .nav-links {
-            list-style: none;
+        .icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        nav {
             display: flex;
-            gap: 1rem;
+        }
+
+        .nav-links {
+            list-style-type: none;
+            display: flex;
         }
 
         .nav-links li {
-            display: inline;
+            margin-left: 20px;
         }
 
         .nav-links a {
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #333;
         }
 
+        /* Highlight active page */
         .nav-links a.active {
-            color: #007bff;
+            font-weight: bold;
+            background-color: #f4d03f;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            color: #000;
         }
 
+        /* Responsive Design */
+        @media only screen and (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+        }
+
+        /* Main content styling */
         main {
-            padding: 20px;
+            padding: 2rem;
         }
 
         footer {
-            text-align: center;
             padding: 1rem;
+            text-align: center;
             background-color: #f4f4f4;
-            margin-top: 20px;
-        }
-
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .grant-entry {
-            margin-bottom: 2rem;
-        }
-
-        h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        p {
-            margin-bottom: 0.5rem;
         }
     </style>
 </head>
@@ -90,7 +109,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="people.html">People</a></li>
                     <li><a href="publication.html">Publications</a></li>
-                    <li><a href="grants.html">Grants</a></li>
+                    <li><a href="grants.html" class="active">Grants</a></li>
                     <li><a href="research.html">Research</a></li>
                     <li><a href="talks.html">Talks</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
@@ -110,14 +129,6 @@
                 <p><strong>Description or Abstract:</strong> This project focuses on applying machine learning techniques to improve early detection of chronic diseases like diabetes and heart disease.</p>
                 <p><strong>Organization Funded:</strong> National Institutes of Health (NIH)</p>
                 <p><strong>Amount:</strong> $500,000</p>
-            </div>
-
-            <!-- Second Grant Entry -->
-            <div class="grant-entry">
-                <h3>Grant Title: Blockchain for Secure Data Transactions</h3>
-                <p><strong>Description or Abstract:</strong> Research focused on leveraging blockchain technology to ensure secure and decentralized data transactions in sensitive industries like healthcare and finance.</p>
-                <p><strong>Organization Funded:</strong> National Science Foundation (NSF)</p>
-                <p><strong>Amount:</strong> $750,000</p>
             </div>
         </section>
     </main>
