@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grants - SRIS LAB</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your main stylesheet -->
+    <title>SRIS LAB</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         /* Basic reset */
         * {
@@ -15,6 +15,9 @@
 
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
         }
 
         .header-container {
@@ -24,6 +27,9 @@
             align-items: center;
             padding: 1rem;
             background-color: #f4f4f4;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto; /* Center the content */
         }
 
         .icon {
@@ -37,6 +43,8 @@
 
         nav {
             display: flex;
+            flex-grow: 1;
+            justify-content: flex-end;
         }
 
         .nav-links {
@@ -68,19 +76,44 @@
             .header-container {
                 flex-direction: column;
                 align-items: flex-start;
+                padding: 1rem;
+            }
+
+            .icon {
+                width: 40px;
+                height: 40px;
             }
 
             h1 {
                 font-size: 1.5rem;
+                text-align: center;
+                width: 100%;
+            }
+
+            nav {
+                width: 100%;
             }
 
             .nav-links {
                 flex-direction: column;
+                align-items: flex-start;
                 width: 100%;
             }
 
             .nav-links li {
                 margin: 10px 0;
+            }
+
+            .nav-links a {
+                font-size: 1.2rem; /* Slightly larger font size for easier readability */
+                padding: 0.5rem;
+                width: 100%;
+                display: block;
+            }
+
+            .header-container {
+                align-items: center;
+                width: 100%;
             }
         }
 
@@ -99,17 +132,14 @@
 <body>
     <header>
         <div class="header-container">
-            <!-- Lab Icon -->
-            <img src="images/icons/icon.png" alt="SRIS Lab Icon" class="icon">
-            <!-- Lab Name -->
+            <img src="path_to_your_icon.png" alt="SRIS Lab Icon" class="icon"> <!-- Update the path to your icon -->
             <h1>SRIS LAB</h1>
-            <!-- Navigation Bar -->
             <nav>
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="people.html">People</a></li>
                     <li><a href="publication.html">Publications</a></li>
-                    <li><a href="grants.html" class="active">Grants</a></li>
+                    <li><a href="grants.html">Grants</a></li>
                     <li><a href="research.html">Research</a></li>
                     <li><a href="talks.html">Talks</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
@@ -119,17 +149,9 @@
     </header>
 
     <main>
-        <section id="grants">
-            <h2>Grants</h2>
-            <p>Below are some of the major grants that SRIS LAB has received:</p>
-
-            <!-- First Grant Entry -->
-            <div class="grant-entry">
-                <h3>Grant Title: Machine Learning for Healthcare</h3>
-                <p><strong>Description or Abstract:</strong> This project focuses on applying machine learning techniques to improve early detection of chronic diseases like diabetes and heart disease.</p>
-                <p><strong>Organization Funded:</strong> National Institutes of Health (NIH)</p>
-                <p><strong>Amount:</strong> $500,000</p>
-            </div>
+        <section id="home">
+            <h2>Welcome to SRIS LAB</h2>
+            <p>Here at SRIS LAB, we focus on data science and innovative research...</p>
         </section>
     </main>
 
