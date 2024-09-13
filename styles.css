@@ -13,8 +13,8 @@ body {
     justify-content: flex-start;
     min-height: 100vh;
     overflow-x: hidden;
-    background-color: white; /* Changed body background to white */
-    padding-top: 0;
+    background-color: white;
+    padding-top: 0; /* Ensure no padding at the top of the body */
 }
 
 .container {
@@ -25,24 +25,32 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 0; /* No padding inside the container that might affect the header */
 }
 
 .header-container {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #097969; /* Set header background color */
-      padding: 0;
+    align-items: center; /* Align items center to remove any unwanted vertical space */
+    background-color: #097969;
+    padding: 0; /* Explicitly set padding to 0 */
+}
+
+
+/* Zero out padding and margins for all potential inner elements */
+.header-container *, .header-container *:before, .header-container *:after {
+    margin: 0;
+    padding: 0;
 }
 
 main, footer {
     width: 100%;
-    background-color: white; /* Changed main background to white */
+    background-color: white;
 }
 
 footer {
-    background-color: #097969; /* Set footer background color */
+    background-color: #097969;
     padding: 1rem;
     text-align: center;
     width: 100%;
