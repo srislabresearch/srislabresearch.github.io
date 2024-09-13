@@ -7,25 +7,42 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 20px;
+    margin: 0;
+    padding: 0;
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .header-container {
     display: flex;
-    justify-content: center; /* Center items horizontally */
-    align-items: center;
+    flex-direction: row;
+    justify-content: center; /* Centralize content horizontally */
+    align-items: center; /* Centralize content vertically */
     padding: 1rem;
     background-color: #f4f4f4;
 }
 
-.nav-links {
-    list-style: none;
+.icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px; /* Space between the icon and the title */
+}
+
+h1 {
+    font-size: 2rem;
+    margin-right: 20px; /* Space between the title and navigation */
+}
+
+nav {
     display: flex;
-    justify-content: space-evenly; /* Ensure even spacing */
-    width: 100%; /* Make nav-links span entire width of its container */
-    margin: 0 10%; /* Apply margin on both sides */
+    width: 100%; /* Full width to spread nav items */
+    justify-content: center; /* Align nav items in the center */
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around; /* Evenly space nav items */
+    width: 100%; /* Ensure nav links use full available space */
     padding: 0;
 }
 
@@ -35,38 +52,41 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #333;
-    padding: 10px;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
 }
 
-.nav-links a.active, .nav-links a:hover {
+.nav-links a.active {
+    font-weight: bold;
     background-color: #f4d03f;
     color: #000;
 }
 
+@media only screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-links a {
+        width: 100%; /* Full width for mobile */
+    }
+}
+
 main {
-    padding: 20px;
+    padding: 2rem;
 }
 
 footer {
-    text-align: center;
     padding: 1rem;
+    text-align: center;
     background-color: #f4f4f4;
-    margin-top: 20px;
-}
-
-@media only screen and (max-width: 768px) {
-    .header-container, .nav-links {
-        flex-direction: column;
-    }
-
-    .nav-links li, .nav-links a {
-        width: 100%; /* Full width for easier navigation */
-    }
-
-    body {
-        margin: 10px;
-    }
 }
