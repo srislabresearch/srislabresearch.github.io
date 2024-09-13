@@ -7,88 +7,136 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Basic reset */
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        
+        .header-container {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            background-color: #f4f4f4;
+            width: 100%; /* Make header span full width */
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 960px; /* Control max width */
+            margin: 0 auto; /* Center the content */
+        }
+        
+        .icon {
+            width: 50px;
+            height: 50px;
+        }
+        
+        h1 {
+            font-size: 2rem;
+        }
+        
+        nav {
+            display: flex;
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+        
+        
+        .nav-links {
+            list-style-type: none;
+            display: flex;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #333;
+        }
+        
+        .nav-links a.active {
+            font-weight: bold;
+            background-color: #f4d03f;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            color: #000;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                align-items: center; /* Align items in center when stacked */
+            }
+            /* Adjustments for .icon, h1, nav, and .nav-links as needed */
+        }
+        
+            .icon {
+                width: 40px;
+                height: 40px;
+            }
+        
+            h1 {
+                font-size: 1.5rem;
+                text-align: center;
+                width: 100%;
+            }
+        
+            nav {
+                width: 100%;
+            }
+        
+            .nav-links {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+            }
+        
+            .nav-links li {
+                margin: 10px 0;
+            }
+        
+            .nav-links a {
+                font-size: 1.2rem;
+                padding: 0.5rem;
+                width: 100%;
+                display: block;
+            }
+        }
+        
+        main {
+            padding: 2rem;
+            width: 100%;
+            max-width: 960px; /* Consistent with the header */
+            margin: auto; /* Centering main content */
+        }
+        
+        footer {
+            padding: 1rem;
+            text-align: center;
+            background-color: #f4f4f4;
+            width: 100%;
+            max-width: 960px; /* Consistent with the header and main */
+            margin: auto; /* Centering footer content */
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    padding: 20px; /* Adds some padding around the content */
-}
-
-.header-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #f4f4f4;
-    width: 100%;
-    max-width: 800px; /* Adjust this to control the max width */
-    margin: 0 auto; /* Center the header */
-}
-
-.icon {
-    width: 50px;
-    height: 50px;
-}
-
-h1 {
-    font-size: 2rem;
-}
-
-nav {
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
-}
-
-.nav-links {
-    list-style-type: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    font-size: 1rem;
-    color: #333;
-}
-
-.nav-links a.active {
-    font-weight: bold;
-    background-color: #f4d03f;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    color: #000;
-}
-
-main {
-    padding: 2rem;
-    width: 100%;
-    max-width: 800px; /* Consistent with the header container */
-    margin: 0 auto; /* Center main content */
-}
-
-footer {
-    padding: 1rem;
-    text-align: center;
-    background-color: #f4f4f4;
-    width: 100%;
-    max-width: 800px; /* Consistent with the header and main */
-    margin: 0 auto; /* Center footer */
-}
     </style>
 </head>
 <body>
