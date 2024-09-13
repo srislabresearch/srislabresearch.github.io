@@ -29,7 +29,7 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 800px; /* Control max width */
+    max-width: 960px; /* Control max width */
     margin: 0 auto; /* Center the content */
 }
 
