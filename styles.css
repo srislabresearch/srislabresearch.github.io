@@ -7,43 +7,45 @@
 
 body {
     font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full height viewport */
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #f4f4f4; /* Assuming a light gray background */
 }
 
 .header-container {
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Maximum width */
+    margin: auto; /* Centering the header */
     display: flex;
     flex-direction: row;
-    justify-content: center; /* Centralize content horizontally */
-    align-items: center; /* Centralize content vertically */
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem;
-    background-color: #f4f4f4;
 }
 
 .icon {
     width: 50px;
     height: 50px;
-    margin-right: 20px; /* Space between the icon and the title */
 }
 
 h1 {
     font-size: 2rem;
-    margin-right: 20px; /* Space between the title and navigation */
 }
 
 nav {
     display: flex;
-    width: 100%; /* Full width to spread nav items */
-    justify-content: center; /* Align nav items in the center */
 }
 
 .nav-links {
     list-style-type: none;
     display: flex;
-    justify-content: space-around; /* Evenly space nav items */
-    width: 100%; /* Ensure nav links use full available space */
     padding: 0;
+    gap: 20px;
 }
 
 .nav-links li {
@@ -64,29 +66,28 @@ nav {
     color: #000;
 }
 
+main {
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Maximum width */
+    margin: auto; /* Centering main content */
+    padding: 2rem;
+}
+
+footer {
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Maximum width */
+    margin: auto; /* Centering footer */
+    padding: 1rem;
+    text-align: center;
+}
+
 @media only screen and (max-width: 768px) {
-    .header-container {
+    .header-container, nav, .nav-links, main, footer {
         flex-direction: column;
         align-items: center;
     }
 
     .nav-links {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+        width: 100%; /* Full width on smaller screens */
     }
-
-    .nav-links a {
-        width: 100%; /* Full width for mobile */
-    }
-}
-
-main {
-    padding: 2rem;
-}
-
-footer {
-    padding: 1rem;
-    text-align: center;
-    background-color: #f4f4f4;
 }
