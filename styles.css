@@ -30,10 +30,8 @@ body {
 
 .header-container {
     width: 100%;
-    max-width: 100%;
-    padding: 0 20px; /* Add padding to avoid header touching edges */
     display: flex;
-    justify-content: space-between; /* Align content properly */
+    justify-content: center;
     background-color: #097969; /* Set header background color */
 }
 
