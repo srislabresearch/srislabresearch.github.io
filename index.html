@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SRIS LAB</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         /* Basic reset */
         * {
@@ -23,7 +22,7 @@
         .header-container {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: center; /* Center all items */
             align-items: center;
             padding: 1rem;
             background-color: #f4f4f4;
@@ -33,89 +32,58 @@
         .icon {
             width: 50px;
             height: 50px;
+            margin-right: 20px; /* Space between the icon and the title */
         }
 
         h1 {
             font-size: 2rem;
+            margin-right: 20px; /* Space between the title and navigation */
         }
 
         nav {
             display: flex;
             flex-grow: 1;
-            justify-content: flex-end;
+            justify-content: center; /* Centering navigation links */
         }
 
         .nav-links {
             list-style-type: none;
             display: flex;
-        }
-
-        .nav-links li {
-            margin-left: 20px;
+            padding: 0;
+            gap: 20px; /* Space between links */
         }
 
         .nav-links a {
             text-decoration: none;
             font-size: 1rem;
             color: #333;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
         }
 
-        /* Highlight active page */
         .nav-links a.active {
             font-weight: bold;
             background-color: #f4d03f;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
             color: #000;
         }
 
-        /* Responsive Design */
         @media only screen and (max-width: 768px) {
             .header-container {
                 flex-direction: column;
-                align-items: flex-start;
-                padding: 1rem;
-            }
-
-            .icon {
-                width: 40px;
-                height: 40px;
-            }
-
-            h1 {
-                font-size: 1.5rem;
-                text-align: center;
-                width: 100%;
-            }
-
-            nav {
-                width: 100%;
+                align-items: center;
             }
 
             .nav-links {
                 flex-direction: column;
-                align-items: flex-start;
-                width: 100%;
-            }
-
-            .nav-links li {
-                margin: 10px 0;
-            }
-
-            .nav-links a {
-                font-size: 1.2rem; /* Slightly larger font size for easier readability */
-                padding: 0.5rem;
-                width: 100%;
-                display: block;
-            }
-
-            .header-container {
                 align-items: center;
                 width: 100%;
             }
+
+            .nav-links a {
+                width: 100%; /* Full width for mobile */
+            }
         }
 
-        /* Main content styling */
         main {
             padding: 2rem;
         }
@@ -130,7 +98,7 @@
 <body>
     <header>
         <div class="header-container">
-            <img src="pass.png" alt="SRIS Lab Icon" class="icon"> <!-- Update the path to your icon -->
+            <img src="pass.png" alt="SRIS Lab Icon" class="icon">
             <h1>SRIS LAB</h1>
             <nav>
                 <ul class="nav-links">
