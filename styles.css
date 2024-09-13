@@ -10,12 +10,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;  /* Changed from center to start to align content to the top */
     min-height: 100vh;
     overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #f4f4f4; /* Ensure the entire body has a uniform background */
+    padding-top: 20px; /* Add top padding if needed for overall page padding */
 }
 
-/* General container for consistent width and centering */
 .container {
     width: 100%;
     max-width: 960px; /* Standard width across all sections */
@@ -24,17 +25,19 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0; /* Vertical padding for visual comfort */
+    padding: 0; /* Removed vertical padding */
 }
 
 .header-container {
     width: 100%;
+    display: flex;
+    justify-content: center;
     background-color: #f4f4f4;
 }
 
 main, footer {
     width: 100%; /* Full width */
-    background-color: #f4f4f4; /* Background color for consistency */
+    background-color: #f4f4f4; /* Ensured consistency */
 }
 
 .icon {
@@ -43,7 +46,7 @@ main, footer {
 }
 
 h1 {
-    font-size: 2rem; /* Heading size */
+    font-size: 2rem;
 }
 
 nav {
@@ -58,7 +61,7 @@ nav {
 }
 
 .nav-links li {
-    margin-left: 20px; /* Space between navigation items */
+    margin-left: 20px;
 }
 
 .nav-links a {
@@ -77,38 +80,37 @@ nav {
 
 @media only screen and (max-width: 768px) {
     .container {
-        flex-direction: column; /* Stack elements vertically on smaller screens */
+        flex-direction: column;
         align-items: center;
     }
 
     .icon, h1, nav {
-        width: 100%; /* Full width for all header elements */
+        width: 100%;
         justify-content: center;
-        text-align: center; /* Center text and elements */
+        text-align: center;
     }
 
     .nav-links {
-        flex-direction: column; /* Stack nav links vertically */
+        flex-direction: column;
         align-items: center;
     }
 
     .nav-links li {
-        margin: 5px 0; /* Adjusted margin for stacked links */
+        margin: 5px 0;
     }
 }
 
 main {
-    padding: 2rem;
+    padding: 2rem 0; /* Adjusted padding for uniformity */
     width: 100%;
-    max-width: 960px; /* Uniform max-width */
-    margin: auto; /* Centering main content */
+    max-width: 960px;
+    margin: auto;
 }
 
 footer {
     padding: 1rem;
     text-align: center;
-    background-color: #f4f4f4;
     width: 100%;
-    max-width: 960px; /* Uniform max-width */
-    margin: auto; /* Centering footer content */
+    max-width: 960px;
+    margin: auto;
 }
