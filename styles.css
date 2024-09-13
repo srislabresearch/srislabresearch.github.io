@@ -29,12 +29,9 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 100%; /* Increased max-width to allow more horizontal space usage */
-    margin: 0 auto;
+    max-width: 960px; /* Set max-width to 960px for uniformity */
+    margin: 0 auto; /* Center the content within the header */
 }
-
-/* Other styles remain unchanged */
-
 
 .icon {
     width: 50px;
@@ -50,7 +47,6 @@ nav {
     flex-grow: 1;
     justify-content: flex-end;
 }
-
 
 .nav-links {
     list-style-type: none;
@@ -105,11 +101,10 @@ nav {
     }
 }
 
-
 main {
     padding: 2rem;
     width: 100%;
-    max-width: 960px; /* Consistent with the header */
+    max-width: 960px; /* Consistent with the header and footer */
     margin: auto; /* Centering main content */
 }
 
