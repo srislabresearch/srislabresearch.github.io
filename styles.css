@@ -74,44 +74,34 @@ nav {
 
 @media only screen and (max-width: 768px) {
     .header-container {
-        flex-direction: column;
-        align-items: center; /* Align items in center when stacked */
+        flex-direction: row;
+        align-items: center; /* Keeps items aligned in the center when the screen is narrow */
     }
-    /* Adjustments for .icon, h1, nav, and .nav-links as needed */
-}
 
     .icon {
-        width: 40px;
+        width: 40px; /* Slightly smaller icon for mobile */
         height: 40px;
     }
 
     h1 {
-        font-size: 1.5rem;
-        text-align: center;
-        width: 100%;
+        font-size: 1.5rem; /* Smaller font size for mobile */
     }
 
     nav {
-        width: 100%;
+        width: 100%; /* Ensures nav occupies the full width available */
     }
 
     .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
+        flex-direction: row; /* Keeps links in a row */
+        justify-content: space-around; /* Spreads the links evenly */
     }
 
     .nav-links a {
-        font-size: 1.2rem;
-        padding: 0.5rem;
-        width: 100%;
-        display: block;
+        font-size: 1rem; /* Slightly larger font size for easier readability on mobile */
+        padding: 0.5rem; /* Adequate padding for touch targets */
     }
 }
+
 
 main {
     padding: 2rem;
