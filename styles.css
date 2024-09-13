@@ -7,12 +7,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers content horizontally */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .header-container {
@@ -23,8 +23,8 @@ body {
     padding: 1rem;
     background-color: #f4f4f4;
     width: 100%; /* Make header span full width */
-    max-width: 1200px; /* Maximum width of the header */
-    margin: 0 auto; /* Centers the header */
+    max-width: 960px; /* Control max width for better presentation */
+    margin: auto;
 }
 
 .icon {
@@ -68,9 +68,10 @@ nav {
 @media only screen and (max-width: 768px) {
     .header-container {
         flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
+        align-items: center; /* Align items in center when stacked */
     }
+    /* Adjustments for .icon, h1, nav, and .nav-links as needed */
+}
 
     .icon {
         width: 40px;
@@ -107,9 +108,9 @@ nav {
 
 main {
     padding: 2rem;
-    max-width: 1200px; /* Maximum width of main content */
     width: 100%;
-    margin: 0 auto; /* Centers main content */
+    max-width: 960px; /* Consistent with the header */
+    margin: auto; /* Centering main content */
 }
 
 footer {
@@ -117,6 +118,6 @@ footer {
     text-align: center;
     background-color: #f4f4f4;
     width: 100%;
-    max-width: 1200px; /* Maximum width of footer */
-    margin: 0 auto; /* Centers footer */
+    max-width: 960px; /* Consistent with the header and main */
+    margin: auto; /* Centering footer content */
 }
