@@ -15,27 +15,25 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem; /* Reduced padding to decrease height */
-    background-color: #f4f4f4;
+/* Container Style */
+.container {
     width: 100%;
-}
-
-.header-container, main, footer {
-    width: 100%; /* Ensure outer containers are full width */
-}
-
-.header-content, .content-width { /* Simplified styling for all content containers */
+    max-width: 960px; /* Adjusted width to match footer */
+    margin: 0 auto; /* Centering the container */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
 }
+
+.header-container, main, footer {
+    width: 100%; /* Full width to align with the viewport */
+    display: flex;
+    justify-content: center; /* Ensures the inner container is centered */
+    background-color: #f4f4f4; /* Optional: For consistency, if you want the same background color */
+    padding: 0.5rem 0; /* Consistent padding */
+}
+
 
 .icon {
     width: 50px;
