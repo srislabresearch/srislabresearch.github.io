@@ -46,7 +46,6 @@ img {
     image-rendering: optimizeQuality;
 }
 
-
 /* Zero out padding and margins for all potential inner elements */
 .header-container *, .header-container *:before, .header-container *:after {
     margin: 0;
@@ -146,4 +145,23 @@ main {
     width: 100%;
     max-width: 960px;
     margin: auto;
+}
+
+/* Custom spacing for sections */
+.director-section {
+    margin-bottom: 32px; /* Space after the Director section */
+}
+
+.faculty-section {
+    padding-top: 32px; /* Space before the Faculty section */
+}
+
+@media only screen and (max-width: 768px) {
+    .director-section {
+        margin-bottom: 20px; /* Smaller space for mobile devices */
+    }
+
+    .faculty-section {
+        padding-top: 20px; /* Adjusted space for mobile devices */
+    }
 }
