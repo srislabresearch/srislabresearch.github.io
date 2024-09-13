@@ -14,7 +14,7 @@ body {
     min-height: 100vh;
     overflow-x: hidden;
     background-color: white; /* Changed body background to white */
-    padding-top: 20px;
+    padding-top: 0;
 }
 
 .container {
