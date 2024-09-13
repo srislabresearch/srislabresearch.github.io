@@ -23,20 +23,18 @@ body {
     width: 100%;
 }
 
-.header-content {
+.header-container, main, footer {
+    width: 100%; /* Ensure outer containers are full width */
+}
+
+.header-content, .content-width { /* Simplified styling for all content containers */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 960px; /* Uniform max-width */
-    margin: 0 auto; /* Center the content within the header */
-}
-
-.content-width {
-    width: 100%; /* Ensures it takes full available width */
-    max-width: 960px; /* Standard max-width for consistency */
-    margin: 0 auto; /* Centers the content */
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 .icon {
