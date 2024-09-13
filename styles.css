@@ -17,14 +17,20 @@ body {
 
 .header-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     padding: 1rem;
     background-color: #f4f4f4;
     width: 100%; /* Make header span full width */
-    max-width: 960px; /* Control max width for better presentation */
-    margin: auto;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; /* Control max width */
+    margin: 0 auto; /* Center the content */
 }
 
 .icon {
@@ -41,6 +47,7 @@ nav {
     flex-grow: 1;
     justify-content: flex-end;
 }
+
 
 .nav-links {
     list-style-type: none;
