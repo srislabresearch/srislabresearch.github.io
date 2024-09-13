@@ -9,6 +9,7 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 20px;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .header-container {
@@ -17,18 +18,19 @@ body {
     align-items: center;
     padding: 1rem;
     background-color: #f4f4f4;
+    margin: 0 15%; /* Adding margin to the left and right */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 1rem;
-    padding: 0; /* Removes default padding */
-    margin: 0; /* Aligns with flex centering */
+    padding: 0;
+    margin: 0;
 }
 
 .nav-links li {
-    padding: 10px; /* Added padding for better tap targets */
+    padding: 10px;
 }
 
 .nav-links a {
@@ -36,16 +38,17 @@ body {
     font-size: 1.1rem;
     color: #333;
     padding: 10px;
-    border-radius: 5px; /* Unified border radius */
+    border-radius: 5px;
 }
 
 .nav-links a.active, .nav-links a:hover {
-    background-color: #f4d03f; /* Consistent highlight color */
+    background-color: #f4d03f;
     color: #000;
 }
 
 main {
     padding: 20px;
+    margin: 0 15%; /* Consistent with header margin */
 }
 
 footer {
@@ -53,30 +56,22 @@ footer {
     padding: 1rem;
     background-color: #f4f4f4;
     margin-top: 20px;
+    margin: 0 15%; /* Consistent with header margin */
 }
 
-h2 {
+h2, h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-.grant-entry {
-    margin-bottom: 2rem;
-}
-
-h3 {
-    font-size: 1.5rem;
+.grant-entry, p {
     margin-bottom: 0.5rem;
 }
 
-p {
-    margin-bottom: 0.5rem;
-}
-
-/* Responsive design for smaller screens */
 @media only screen and (max-width: 768px) {
-    .header-container {
-        flex-direction: column; /* Stacks header items vertically */
+    .header-container, main, footer {
+        flex-direction: column;
+        margin: 0 10px; /* Reduced margin for smaller screens */
     }
 
     .nav-links {
@@ -88,6 +83,6 @@ p {
     }
 
     body {
-        margin: 10px; /* Smaller margin on smaller screens */
+        margin: 10px;
     }
 }
