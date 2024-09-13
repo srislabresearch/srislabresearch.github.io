@@ -18,15 +18,15 @@ body {
     align-items: center;
     padding: 1rem;
     background-color: #f4f4f4;
-    margin: 0 15%; /* Adding margin to the left and right */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1rem;
+    justify-content: space-evenly; /* Ensure even spacing */
+    width: 100%; /* Make nav-links span entire width of its container */
+    margin: 0 10%; /* Apply margin on both sides */
     padding: 0;
-    margin: 0;
 }
 
 .nav-links li {
@@ -48,7 +48,6 @@ body {
 
 main {
     padding: 20px;
-    margin: 0 15%; /* Consistent with header margin */
 }
 
 footer {
@@ -56,25 +55,10 @@ footer {
     padding: 1rem;
     background-color: #f4f4f4;
     margin-top: 20px;
-    margin: 0 15%; /* Consistent with header margin */
-}
-
-h2, h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.grant-entry, p {
-    margin-bottom: 0.5rem;
 }
 
 @media only screen and (max-width: 768px) {
-    .header-container, main, footer {
-        flex-direction: column;
-        margin: 0 10px; /* Reduced margin for smaller screens */
-    }
-
-    .nav-links {
+    .header-container, .nav-links {
         flex-direction: column;
     }
 
