@@ -37,6 +37,11 @@ body {
     padding: 0; /* Explicitly set padding to 0 */
 }
 
+.header-container {
+    overflow: hidden; /* This will clip off any overflow content that might be causing visual irregularities */
+    border-radius: 5px; /* Optional: Smooth out the corners if that is desirable */
+}
+
 
 /* Zero out padding and margins for all potential inner elements */
 .header-container *, .header-container *:before, .header-container *:after {
