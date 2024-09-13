@@ -15,25 +15,27 @@ body {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-/* Container Style */
+/* General container for consistent width and centering */
 .container {
     width: 100%;
-    max-width: 960px; /* Adjusted width to match footer */
-    margin: 0 auto; /* Centering the container */
+    max-width: 960px; /* Standard width across all sections */
+    margin: 0 auto; /* Centering content horizontally */
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0; /* Vertical padding for visual comfort */
 }
 
-.header-container, main, footer {
-    width: 100%; /* Full width to align with the viewport */
-    display: flex;
-    justify-content: center; /* Ensures the inner container is centered */
-    background-color: #f4f4f4; /* Optional: For consistency, if you want the same background color */
-    padding: 0.5rem 0; /* Consistent padding */
+.header-container {
+    width: 100%;
+    background-color: #f4f4f4;
 }
 
+main, footer {
+    width: 100%; /* Full width */
+    background-color: #f4f4f4; /* Background color for consistency */
+}
 
 .icon {
     width: 50px;
@@ -41,7 +43,7 @@ body {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2rem; /* Heading size */
 }
 
 nav {
@@ -56,7 +58,7 @@ nav {
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin-left: 20px; /* Space between navigation items */
 }
 
 .nav-links a {
@@ -74,32 +76,24 @@ nav {
 }
 
 @media only screen and (max-width: 768px) {
-    .header-container {
-        flex-direction: row;
+    .container {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
         align-items: center;
     }
 
-    .icon {
-        width: 40px; /* Slightly smaller icon for mobile */
-        height: 40px;
-    }
-
-    h1 {
-        font-size: 1.5rem; /* Smaller font size for mobile */
-    }
-
-    nav {
-        width: 100%; /* Ensures nav occupies the full width available */
+    .icon, h1, nav {
+        width: 100%; /* Full width for all header elements */
+        justify-content: center;
+        text-align: center; /* Center text and elements */
     }
 
     .nav-links {
-        flex-direction: row; /* Keeps links in a row */
-        justify-content: space-around; /* Spreads the links evenly */
+        flex-direction: column; /* Stack nav links vertically */
+        align-items: center;
     }
 
-    .nav-links a {
-        font-size: 1rem; /* Slightly larger font size for easier readability on mobile */
-        padding: 0.5rem; /* Adequate padding for touch targets */
+    .nav-links li {
+        margin: 5px 0; /* Adjusted margin for stacked links */
     }
 }
 
