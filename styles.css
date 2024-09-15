@@ -15,25 +15,19 @@ body {
 .header-container {
     background-color: #097969;
     width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center; /* Center the entire content */
+    padding: 0; /* Remove extra padding */
+    margin: 0; /* Remove margin to avoid any extra space */
+    box-sizing: border-box; /* Ensure no extra width is added by padding */
 }
 
 .header-content {
     width: 100%;
-    max-width: 960px; /* Align content to a maximum width like the footer */
+    max-width: 960px; /* Align content to a maximum width */
     display: flex;
-    justify-content: space-between; /* Space between logo and nav links */
-    align-items: center; /* Vertically center items */
-}
-
-.container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Align items within the content */
     align-items: center;
+    margin: 0 auto; /* Center the header */
+    padding: 10px 20px; /* Add some padding inside the content */
 }
 
 .icon {
@@ -92,6 +86,26 @@ main {
     max-width: 960px;
     margin: auto;
 }
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+}
+
+
+
 button {
     background-color: #097969; /* Button background color */
     color: white; /* Button text color */
