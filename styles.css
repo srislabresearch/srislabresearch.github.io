@@ -24,7 +24,9 @@ body {
     justify-content: space-between; /* Ensure space between the elements */
     align-items: center; /* Center the items vertically */
     background-color: #097969;
-    padding: 10px 20px; /* Add padding to create some space around the content */
+    padding: 1rem; /* Add padding to create some space around the content */
+    margin: auto;
+    max-width: 960px
     box-sizing: border-box; /* Make sure padding does not add extra width */
 }
 
