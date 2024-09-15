@@ -17,29 +17,36 @@ body {
     padding-top: 0; /* Ensure no padding at the top of the body */
 }
 
-.container {
+/* Updated Header Styling */
+.header-container {
     width: 100%;
+    display: flex;
+    justify-content: space-between; /* Ensure space between the elements */
+    align-items: center; /* Center the items vertically */
+    background-color: #097969;
+    padding: 10px 20px; /* Add padding to create some space around the content */
+    box-sizing: border-box; /* Make sure padding does not add extra width */
+}
+
+.container {
     max-width: 960px;
     margin: 0 auto;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0; /* No padding inside the container that might affect the header */
 }
 
-.header-container {
-    width: 100%;
+nav {
     display: flex;
-    justify-content: center;
-    align-items: center; /* Align items center to remove any unwanted vertical space */
-    background-color: #097969;
-    padding: 0; /* Explicitly set padding to 0 */
+    flex-grow: 1;
+    justify-content: flex-end;
+    padding-right: 20px; /* Add padding to avoid the nav links touching the right edge */
 }
 
-.header-container {
-    overflow: hidden; /* This will clip off any overflow content that might be causing visual irregularities */
-    border-radius: 5px; /* Optional: Smooth out the corners if that is desirable */
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin-right: 0; /* Remove any potential right margin */
 }
 
 img {
@@ -74,17 +81,6 @@ footer {
 h1 {
     font-size: 2rem;
     color: white; /* Ensure text color is visible on the dark header */
-}
-
-nav {
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
-}
-
-.nav-links {
-    list-style-type: none;
-    display: flex;
 }
 
 .nav-links li {
