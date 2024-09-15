@@ -12,22 +12,21 @@ body {
 }
 
 /* Header and Footer Styling */
-.header-container {
+.header-container,
+footer {
     background-color: #097969;
     width: 100%;
-    padding: 0; /* Remove extra padding */
-    margin: 0; /* Remove margin to avoid any extra space */
-    box-sizing: border-box; /* Ensure no extra width is added by padding */
+    padding: 1rem;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.header-content {
+/* Center content within the header and footer */
+.header-content,
+footer {
     width: 100%;
-    max-width: 960px; /* Align content to a maximum width */
-    display: flex;
-    justify-content: space-between; /* Align items within the content */
-    align-items: center;
-    margin: 0 auto; /* Center the header */
-    padding: 10px 20px; /* Add some padding inside the content */
+    max-width: 1200px; /* Adjust this value as needed */
+    margin: 0 auto;
 }
 
 .icon {
