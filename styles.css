@@ -12,21 +12,22 @@ body {
 }
 
 /* Header and Footer Styling */
-.header-container,
-footer {
+.header-container {
     background-color: #097969;
     width: 100%;
-    padding: 1rem;
-    margin: 0;
-    box-sizing: border-box;
+    padding: 0; /* Remove extra padding */
+    margin: 0; /* Remove margin to avoid any extra space */
+    box-sizing: border-box; /* Ensure no extra width is added by padding */
 }
 
-/* Center content within the header and footer */
-.header-content,
-footer {
+.header-content {
     width: 100%;
-    max-width: 1200px; /* Adjust this value as needed */
-    margin: 0 auto;
+    max-width: 960px; /* Align content to a maximum width */
+    display: flex;
+    justify-content: space-between; /* Align items within the content */
+    align-items: center;
+    margin: 1 auto; /* Center the header */
+    padding: 10px 20px; /* Add some padding inside the content */
 }
 
 .icon {
