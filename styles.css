@@ -88,6 +88,14 @@ footer {
     color: white;
 }
 
+.news-entry {
+    background-color: #f1f1f1;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+
 /* Main Content Styling */
 main {
     padding: 2rem 0;
