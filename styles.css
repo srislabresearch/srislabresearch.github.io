@@ -7,72 +7,33 @@
 
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
     min-height: 100vh;
-    overflow-x: hidden;
     background-color: white;
-    padding-top: 0; /* Ensure no padding at the top of the body */
 }
 
-/* Updated Header Styling */
+/* Header and Footer Styling */
 .header-container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between; /* Ensure space between the elements */
-    align-items: center; /* Center the items vertically */
     background-color: #097969;
-    padding: 1rem; /* Add padding to create some space around the content */
-    margin: auto;
-    max-width: 960px
-    box-sizing: border-box; /* Make sure padding does not add extra width */
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center; /* Center the entire content */
+}
+
+.header-content {
+    width: 100%;
+    max-width: 960px; /* Align content to a maximum width like the footer */
+    display: flex;
+    justify-content: space-between; /* Space between logo and nav links */
+    align-items: center; /* Vertically center items */
 }
 
 .container {
-    max-width: 960px;
-    margin: 0 auto;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-nav {
-    display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
-    padding-right: 20px; /* Add padding to avoid the nav links touching the right edge */
-}
-
-.nav-links {
-    list-style-type: none;
-    display: flex;
-    margin-right: 0; /* Remove any potential right margin */
-}
-
-img {
-    image-rendering: optimizeQuality;
-}
-
-/* Zero out padding and margins for all potential inner elements */
-.header-container *, .header-container *:before, .header-container *:after {
-    margin: 0;
-    padding: 0;
-}
-
-main, footer {
-    width: 100%;
-    background-color: white;
-}
-
-footer {
-    background-color: #097969;
-    padding: 1rem;
-    text-align: center;
-    width: 100%;
-    max-width: 960px;
-    margin: auto;
 }
 
 .icon {
@@ -82,7 +43,17 @@ footer {
 
 h1 {
     font-size: 2rem;
-    color: white; /* Ensure text color is visible on the dark header */
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
 }
 
 .nav-links li {
@@ -92,7 +63,7 @@ h1 {
 .nav-links a {
     text-decoration: none;
     font-size: 1rem;
-    color: white; /* Set the font color of nav links to white */
+    color: white;
 }
 
 .nav-links a.active {
@@ -101,6 +72,42 @@ h1 {
     padding: 0.5rem 1rem;
     border-radius: 5px;
     color: #000;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #097969;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    max-width: 960px;
+    margin: auto;
+    color: white;
+}
+
+/* Main Content Styling */
+main {
+    padding: 2rem 0;
+    width: 100%;
+    max-width: 960px;
+    margin: auto;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
 }
 
 button {
