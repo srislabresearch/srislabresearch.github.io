@@ -4,6 +4,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+    grid-template-rows: auto auto; /* Auto-adjusted row heights */
+    gap: 20px; /* Space between grid items */
+    padding: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -15,7 +24,7 @@ body {
 .header-container {
     background-color: #097969;
     width: 100%;
-    padding: 0; /* Remove extra padding */
+    padding: 10px 20px; /* Remove extra padding */
     margin: 0; /* Remove margin to avoid any extra space */
     box-sizing: border-box; /* Ensure no extra width is added by padding */
 }
