@@ -23,18 +23,49 @@
         }
 
         main {
-            display: grid;
-            grid-template-columns: 1fr; /* Single column for better focus */
             padding: 20px;
             max-width: 960px;
             margin: 0 auto;
         }
 
-        .talk-entry {
-            background-color: #f1f1f1;
-            margin: 10px 0;
-            padding: 10px;
+        /* Reduced image size */
+        .person-img {
+            width: 150px;
+            height: auto;
             border-radius: 8px;
+        }
+
+        /* Background colors for each section */
+        #director {
+            background-color: #f9f9f9; /* Light grey */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        #faculty {
+            background-color: #e0f7fa; /* Light blue */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        #students {
+            background-color: #fce4ec; /* Light pink */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        #alumni {
+            background-color: #e8f5e9; /* Light green */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .person {
+            margin-bottom: 20px;
         }
 
         footer {
@@ -66,7 +97,7 @@
                 <li><a href="publication.html">Publications</a></li>
                 <li><a href="grants.html">Grants</a></li>
                 <li><a href="research.html">Research</a></li>
-                <!--<li><a href="talks.html">Talks</a></li>--!>
+                <!--<li><a href="talks.html">Talks</a></li>-->
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
@@ -74,14 +105,16 @@
 </header>
     
 <main>
+    <!-- Director Section with background color -->
     <section id="director">
         <h2>Director</h2>
         <div class="person">
-            <img src="People1.png" alt="Dr. Kewei Sha - Director of SRIS LAB" class="People1">
+            <img src="People1.png" alt="Dr. Kewei Sha - Director of SRIS LAB" class="person-img">
             <p><strong>Dr. Kewei Sha</strong><br>Associate Professor, Department of Data Science<br>University of North Texas</p>
         </div>
     </section>
 
+    <!-- Faculty Section with background color -->
     <section id="faculty">
         <h2>Faculty Members</h2>
         <div class="person-grid">
@@ -96,8 +129,10 @@
         </div>
     </section>
 
+    <!-- Students Section with background color -->
     <section id="students">
         <h2>Students</h2>
+
         <h3>Ph.D. Students</h3>
         <div class="person-grid">
             <div class="person">
@@ -130,10 +165,26 @@
             </div>
         </div>
     </section>
+
+    <!-- Alumni Section with background color -->
+    <section id="alumni">
+        <h2>Alumni</h2>
+        <div class="person-grid">
+            <div class="person">
+                <img src="images/alumni1.png" alt="Alumni 1" class="person-img">
+                <p><strong>Alumni 1</strong><br>Previous Role or Program</p>
+            </div>
+            <div class="person">
+                <img src="images/alumni2.png" alt="Alumni 2" class="person-img">
+                <p><strong>Alumni 2</strong><br>Previous Role or Program</p>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer>
     <p>© 2024 SRIS LAB. All Rights Reserved.</p>
 </footer>
+
 </body>
 </html>
