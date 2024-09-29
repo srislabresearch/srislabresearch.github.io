@@ -30,15 +30,6 @@
             margin: 0 auto;
         }
 
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #00853E;
-            color: white;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-
         h1 {
             text-align: left;
             margin-left: 20px;
@@ -53,30 +44,24 @@
             margin-bottom: 2px; /* Add 1pt space between the two sections */
         }
 
-        .news {
-            grid-column: 1 / 3; /* Span across both columns */
-            width: 100%; /* Ensure the news section takes the full width */
-        }
-
         footer {
             text-align: center;
             padding: 10px 0;
             background-color: #00853E;
             color: white;
+            max-width: 960px;
+            margin: 0 auto;
         }
 
         @media (max-width: 768px) {
-            .main-container {
-                grid-template-columns: 1fr; /* Stack columns into one on smaller screens */
-            }
-
-            .about-lab, .slideshow {
-                grid-column: 1; /* All items span full width on smaller screens */
+            .header-container, footer {
+                padding: 10px;
             }
         }
     </style>
 </head>
 <body>
+
 <header class="header-container">
     <div class="header-content">
         <img src="pass.png" alt="SRIS Lab Icon" class="icon">
@@ -86,13 +71,14 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="people.html">People</a></li>
                 <li><a href="publication.html">Publications</a></li>
-                <li><a href="grants.html" class="active">Grants</a></li>
+                <li><a href="grants.html">Grants</a></li>
                 <li><a href="research.html">Research</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
             </ul>
         </nav>
     </div>
 </header>
+<body>
 <main>
     <h2>Grants and Awards</h2>
 
