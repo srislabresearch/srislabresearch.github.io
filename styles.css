@@ -22,7 +22,7 @@ body {
 
 /* Header and Footer Styling */
 .header-container {
-    background-color: #097969;
+    background-color: #00853E;
     width: 100%;
     padding: 10px 20px; /* Remove extra padding */
     margin: 0; /* Remove margin to avoid any extra space */
@@ -79,7 +79,7 @@ nav {
 
 /* Footer Styling */
 footer {
-    background-color: #097969;
+    background-color: #00853E;
     padding: 1rem;
     text-align: center;
     width: 100%;
@@ -124,7 +124,7 @@ main {
 
 
 button {
-    background-color: #097969; /* Button background color */
+    background-color: ##00853E; /* Button background color */
     color: white; /* Button text color */
     border: none;
     padding: 10px 20px;
