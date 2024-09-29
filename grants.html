@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SRIS LAB</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
         body, html {
             margin: 0;
@@ -23,18 +22,25 @@
         }
 
         main {
-            display: grid;
-            grid-template-columns: 1fr; /* Single column for better focus */
             padding: 20px;
             max-width: 960px;
             margin: 0 auto;
         }
 
-        .talk-entry {
-            background-color: #f1f1f1;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 8px;
+        h1 {
+            text-align: left;
+            margin-left: 20px;
+        }
+
+        /* Adjust the UL margins to fit properly within the content area */
+        ul {
+            margin-left: 40px;
+            padding-left: 0;
+            list-style-position: inside; /* Ensure bullets are inside the content area */
+        }
+
+        li {
+            margin-bottom: 10px;
         }
 
         footer {
@@ -46,9 +52,18 @@
             margin: 0 auto;
         }
 
+        /* Footer alignment */
+        footer p {
+            margin: 0; /* Remove any extra margins for perfect alignment */
+        }
+
         @media (max-width: 768px) {
             .header-container, footer {
                 padding: 10px;
+            }
+
+            ul {
+                margin-left: 20px; /* Adjust margin for smaller screens */
             }
         }
     </style>
@@ -71,7 +86,7 @@
         </nav>
     </div>
 </header>
-<body>
+
 <main>
     <h1>Grants and Awards</h1>
     <ul>
@@ -96,7 +111,9 @@
         <li>OCU Summer Undergraduate Research Grant, 2014, PI $5000 awarded</li>
         <li>OCU Student Professional Fund, 2014-2015, PI $1600 awarded</li>
         <li>SC'13 HPC Educator Travel Award, 2013, about $2000 awarded</li>
-     </ul>
+    </ul>
+</main>
+
 <footer>
     <p>© 2024 SRIS LAB. All Rights Reserved.</p>
 </footer>
