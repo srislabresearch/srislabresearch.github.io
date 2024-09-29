@@ -43,26 +43,37 @@
             padding: 20px;
             background-color: #f5f5f5; /* Light grey background for the text section */
             grid-column: 1 / 2; /* Position in the first column */
+            background-color: #fff; /* Set the same background color for both the heading and text */
         }
 
         .about-lab h2 {
             margin-top: 0;
-            background-color: transparent; /* No background color for the title */
+            background-color: transparent; /* Removed the different background color */
             color: #333; /* Dark text for better readability */
         }
 
         .about-lab p {
             text-align: justify;
             margin-top: 10px;
-            background-color: #fff; /* Optional: white background only for paragraph */
         }
         
         .slideshow {
-            grid-column: 2 / 3; /* Position in the second column */
+            grid-column: 1 / 2; /* Position in the second column */
+        }
+
+        .slideshow-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .caption {
+            text-align: center;
+            font-size: 16px;
+            margin-top: 10px;
         }
 
         .news {
-            grid-column: 1 / 3; /* Span across both columns */
+            grid-column: 1 / 2; /* Span across both columns */
         }
 
         footer {
@@ -82,6 +93,8 @@
             }
         }
     </style>
+</head>
+<body>
 <header class="header-container">
     <div class="header-content">
         <img src="pass.png" alt="SRIS Lab Icon" class="icon">
@@ -106,21 +119,23 @@
         <p>The Secure Reliable Intelligent Systems (SRIS) Lab The research lab, led by a prominent investigator with expertise in Data Management and Analytics, Security and Privacy, Edge Computing, Blockchain, and the Internet of Things, has garnered significant acclaim and funding. As either a principal investigator (PI) or co-PI, the lead researcher has successfully secured over $5 million from diverse sources such as NSF, NASA, and various universities. Projects have focused on innovative applications like robust multi-robot systems in dynamic environments and blockchain for system engineering. The lab's work spans practical and theoretical aspects, aiming to push the boundaries of how data and technology can be utilized in dynamic, real-world scenarios.</p>
     </section>
 
-    <!-- Image slideshow section adjusted for better alignment -->
+    <!-- Image slideshow section with captions -->
     <section class="slideshow">
-        <h2>Images</h2>
         <div class="slideshow-container">
-            <!-- Full-width images with number and caption text -->
+            <!-- Full-width images with captions -->
             <div class="slides fade">
                 <img src="Activity_img.png" alt="Image 1">
+                <div class="caption">Caption for Image 1</div>
             </div>
 
             <div class="slides fade">
                 <img src="Activity2.png" alt="Image 2">
+                <div class="caption">Caption for Image 2</div>
             </div>
 
             <div class="slides fade">
                 <img src="image3.png" alt="Image 3">
+                <div class="caption">Caption for Image 3</div>
             </div>
 
             <!-- Next and previous buttons -->
@@ -133,30 +148,30 @@
         <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span> 
             <span class="dot" onclick="currentSlide(2)"></span> 
-            <span the "dot" onclick="currentSlide(3)"></span> 
+            <span class="dot" onclick="currentSlide(3)"></span> 
         </div>
     </section>
 
     <!-- News Section with improved layout -->
-   <section class="news">
-    <h2>News</h2>
+    <section class="news">
+        <h2>News</h2>
 
-    <!-- First News Entry -->
-    <div class="news-entry">
-        <h3>Grant Title: Machine Learning for Healthcare</h3>
-        <p><strong>Description:</strong> This project focuses on applying machine learning techniques to improve early detection of chronic diseases like diabetes and heart disease.</p>
-        <p><strong>Organization Funded:</strong> National Institutes of Health (NIH)</p>
-        <p><strong>Amount:</strong> $500,000</p>
-    </div>
+        <!-- First News Entry -->
+        <div class="news-entry">
+            <h3>Grant Title: Machine Learning for Healthcare</h3>
+            <p><strong>Description:</strong> This project focuses on applying machine learning techniques to improve early detection of chronic diseases like diabetes and heart disease.</p>
+            <p><strong>Organization Funded:</strong> National Institutes of Health (NIH)</p>
+            <p><strong>Amount:</strong> $500,000</p>
+        </div>
 
-    <!-- Second News Entry -->
-    <div class="news-entry">
-        <h3>Grant Title: Blockchain for Secure Data Transactions</h3>
-        <p><strong>Description:</strong> Research focused on leveraging blockchain technology to ensure secure and decentralized data transactions in sensitive industries like healthcare and finance.</p>
-        <p><strong>Organization Funded:</strong> National Science Foundation (NSF)</p>
-        <p><strong>Amount:</strong> $750,000</p>
-    </div>
-</section>
+        <!-- Second News Entry -->
+        <div class="news-entry">
+            <h3>Grant Title: Blockchain for Secure Data Transactions</h3>
+            <p><strong>Description:</strong> Research focused on leveraging blockchain technology to ensure secure and decentralized data transactions in sensitive industries like healthcare and finance.</p>
+            <p><strong>Organization Funded:</strong> National Science Foundation (NSF)</p>
+            <p><strong>Amount:</strong> $750,000</p>
+        </div>
+    </section>
 
 </main>
 
