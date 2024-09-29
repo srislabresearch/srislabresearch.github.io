@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SRIS LAB</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body, html {
             margin: 0;
@@ -22,29 +23,18 @@
         }
 
         main {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column for better focus */
             padding: 20px;
             max-width: 960px;
             margin: 0 auto;
         }
 
-        h1 {
-            text-align: left;
-            margin-left: 20px;
-        }
-
-        h2 {
-            margin-top: 20px;
-        }
-
-        /* Adjust the UL margins to fit properly within the content area */
-        ul {
-            margin-left: 40px;
-            padding-left: 0;
-            list-style-position: inside; /* Ensure bullets are inside the content area */
-        }
-
-        li {
-            margin-bottom: 10px;
+        .talk-entry {
+            background-color: #f1f1f1;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
         }
 
         footer {
@@ -56,18 +46,9 @@
             margin: 0 auto;
         }
 
-        /* Footer alignment */
-        footer p {
-            margin: 0; /* Remove any extra margins for perfect alignment */
-        }
-
         @media (max-width: 768px) {
             .header-container, footer {
                 padding: 10px;
-            }
-
-            ul {
-                margin-left: 20px; /* Adjust margin for smaller screens */
             }
         }
     </style>
@@ -83,14 +64,13 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="people.html">People</a></li>
                 <li><a href="publication.html">Publications</a></li>
-                <li><a href="grants.html" class="active">Grants</a></li>
+                <li><a href="grants.html">Grants</a></li>
                 <li><a href="research.html">Research</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
             </ul>
         </nav>
     </div>
 </header>
-
 <main>
     <h1>Grants and Awards</h1>
 
