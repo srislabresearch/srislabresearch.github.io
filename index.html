@@ -31,8 +31,24 @@
             max-width: 960px;
             margin: 0 auto;
         }
+        
+        .talk-entry {
+            background-color: #f1f1f1;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+        }
 
-        .about-lab {
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #00853E;
+            color: white;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        about-lab {
             padding: 20px;
             background-color: #fff; /* Set the same background color for both the heading and text */
             grid-column: 1; /* Place it in the first column */
@@ -100,13 +116,57 @@
             width: 100%;
         }
 
+
+        /* Dropdown styling for mobile view */
+        .dropdown-menu-button {
+            display: none; /* Hidden by default */
+            background-color: #00853E;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            flex-direction: column;
+            background-color: #00853E;
+            width: 100%;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+
+        .dropdown-content.show {
+            display: flex;
+        }
+
         @media (max-width: 768px) {
+            .header-container, footer {
+                padding: 10px;
+            }
+
+            /* Show dropdown button on mobile */
+            .dropdown-menu-button {
+                display: block;
+            }
+
+            @media (max-width: 768px) {
             main {
                 grid-template-columns: 1fr; /* Stack columns into one on smaller screens */
             }
 
             .about-lab, .slideshow {
                 grid-column: 1; /* All items span full width on smaller screens */
+            }
+        }
+
+            nav ul {
+                display: none; /* Hide regular navigation */
             }
         }
     </style>
@@ -120,34 +180,27 @@
             </a>
             <nav aria-label="Main Navigation">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="people.html">People</a></li>
                     <li><a href="publication.html">Publications</a></li>
                     <li><a href="grants.html">Grants</a></li>
                     <li><a href="research.html">Research</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
                 </ul>
             </nav>
 
             <!-- Dropdown menu for mobile view -->
             <div class="dropdown-menu-button" onclick="toggleDropdown()">Menu</div>
             <div class="dropdown-content" id="dropdown-menu">
-                <a href="index.html" class="active">Home</a>
+                <a href="index.html">Home</a>
                 <a href="people.html">People</a>
                 <a href="publication.html">Publications</a>
                 <a href="grants.html">Grants</a>
                 <a href="research.html">Research</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.html" class="active">Contact Us</a>
             </div>
         </div>
     </header>
-
-    <script>
-        function toggleDropdown() {
-            var menu = document.getElementById("dropdown-menu");
-            menu.classList.toggle("show");
-        }
-    </script>
 
     <main>
         <!-- About the Lab Section -->
