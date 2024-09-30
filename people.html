@@ -59,17 +59,15 @@
 
     .person {
         text-align: center;
-        padding: 20px;
-        border-radius: 15px; /* Curved edges for the container box */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better visual */
     }
 
     .person-img {
         width: 150px; /* Fixed width */
         height: 150px; /* Fixed height to make it square */
         border-radius: 10px; /* Slight curve on the edges */
-        object-fit: cover; /* Ensures the image fits well inside the square without stretching */
+        object-fit: contain; /* Ensures the entire image is visible */
         margin-bottom: 10px;
+        background-color: #f1f1f1; /* Optional background color for image container */
     }
 
     footer {
