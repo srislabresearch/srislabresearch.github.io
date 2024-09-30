@@ -20,6 +20,73 @@
             align-items: center;
             max-width: 960px;
             margin: 0 auto;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .icon {
+            max-height: 50px;
+        }
+
+        nav {
+            flex-grow: 1;
+            text-align: right;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown-menu-button {
+            display: none;
+            cursor: pointer;
+            color: white;
+            font-size: 18px;
+        }
+
+        .dropdown-content {
+            display: none;
+            flex-direction: column;
+            background-color: #00853E;
+            position: absolute;
+            right: 20px;
+            top: 60px;
+            width: 150px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            padding: 10px;
+            text-align: left;
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #00652e;
+        }
+
+        .dropdown-content.show {
+            display: flex;
         }
 
         main {
@@ -46,9 +113,27 @@
             margin: 0 auto;
         }
 
+        /* Responsive styling */
         @media (max-width: 768px) {
-            .header-container, footer {
-                padding: 10px;
+            nav {
+                display: none; /* Hide desktop menu on mobile */
+            }
+
+            .dropdown-menu-button {
+                display: block; /* Show dropdown menu button */
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .dropdown-content {
+                display: none; /* Hide dropdown by default */
+            }
+
+            .dropdown-content.show {
+                display: flex; /* Show dropdown when triggered */
             }
         }
     </style>
@@ -63,8 +148,8 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="people.html">People</a></li>
-                <li><a href="publication.html"  class="active">Publications</a></li>
-                <li><a href="grants.html" >Grants</a></li>
+                <li><a href="publication.html" class="active">Publications</a></li>
+                <li><a href="grants.html">Grants</a></li>
                 <li><a href="research.html">Research</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
@@ -82,6 +167,7 @@
         </div>
     </div>
 </header>
+
 <script>
     function toggleDropdown() {
         var menu = document.getElementById("dropdown-menu");
