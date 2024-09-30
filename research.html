@@ -62,13 +62,30 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="people.html">People</a></li>
                 <li><a href="publication.html">Publications</a></li>
-                <li><a href="grants.html">Grants</a></li>
+                <li><a href="grants.html" >Grants</a></li>
                 <li><a href="research.html" class="active">Research</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
+
+        <!-- Dropdown menu for mobile view -->
+        <div class="dropdown-menu-button" onclick="toggleDropdown()">Menu</div>
+        <div class="dropdown-content" id="dropdown-menu">
+            <a href="index.html">Home</a>
+            <a href="people.html">People</a>
+            <a href="publication.html">Publications</a>
+            <a href="grants.html">Grants</a>
+            <a href="research.html" class="active">Research</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
     </div>
 </header>
+<script>
+    function toggleDropdown() {
+        var menu = document.getElementById("dropdown-menu");
+        menu.classList.toggle("show");
+    }
+</script>
     <main>
         <section id="research-interests">
             <h2>Research Interests</h2>
