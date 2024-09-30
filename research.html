@@ -20,6 +20,73 @@
             align-items: center;
             max-width: 960px;
             margin: 0 auto;
+            flex-wrap: wrap; /* Allow wrapping for mobile view */
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .icon {
+            max-height: 50px;
+        }
+
+        nav {
+            flex-grow: 1;
+            text-align: right;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown-menu-button {
+            display: none; /* Hidden by default on desktop */
+            cursor: pointer;
+            color: white;
+            font-size: 18px;
+        }
+
+        .dropdown-content {
+            display: none;
+            flex-direction: column;
+            background-color: #00853E;
+            position: absolute;
+            right: 20px;
+            top: 60px;
+            width: 150px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            padding: 10px;
+            text-align: left;
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #00652e;
+        }
+
+        .dropdown-content.show {
+            display: flex;
         }
 
         main {
@@ -46,12 +113,32 @@
             margin: 0 auto;
         }
 
+        /* Responsive styling */
         @media (max-width: 768px) {
-            .header-container, footer {
-                padding: 10px;
+            nav {
+                display: none; /* Hide desktop navigation on mobile */
+            }
+
+            .dropdown-menu-button {
+                display: block; /* Show dropdown menu button */
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .dropdown-content {
+                display: none; /* Hide dropdown by default */
+            }
+
+            .dropdown-content.show {
+                display: flex; /* Show dropdown when triggered */
             }
         }
     </style>
+</head>
+<body>
 <header class="header-container">
     <div class="header-content">
         <a href="index.html">
@@ -62,7 +149,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="people.html">People</a></li>
                 <li><a href="publication.html">Publications</a></li>
-                <li><a href="grants.html" >Grants</a></li>
+                <li><a href="grants.html">Grants</a></li>
                 <li><a href="research.html" class="active">Research</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
@@ -80,51 +167,53 @@
         </div>
     </div>
 </header>
+
 <script>
     function toggleDropdown() {
         var menu = document.getElementById("dropdown-menu");
         menu.classList.toggle("show");
     }
 </script>
-    <main>
-        <section id="research-interests">
-            <h2>Research Interests</h2>
-            <p>At SRIS LAB, we focus on a wide range of research topics including but not limited to:</p>
-            <ul>
-                <li>Data Science and Machine Learning</li>
-                <li>Artificial Intelligence for Healthcare</li>
-                <li>Natural Language Processing and Text Mining</li>
-                <li>Big Data Analytics</li>
-                <li>Cybersecurity and Blockchain</li>
-                <li>Computational Biology and Bioinformatics</li>
-                <li>Information Retrieval and Data Quality Management</li>
-            </ul>
-        </section>
 
-        <section id="ongoing-research">
-            <h2>Ongoing Research Projects</h2>
-            <p>Our lab is currently involved in various ongoing research projects aimed at addressing complex challenges in the world of data science and technology:</p>
-            <div class="research-project">
-                <h3>1. Predictive Analytics in Healthcare</h3>
-                <p>This project focuses on building predictive models that help in the early diagnosis and treatment of chronic diseases like diabetes and heart disease using machine learning algorithms.</p>
-            </div>
+<main>
+    <section id="research-interests">
+        <h2>Research Interests</h2>
+        <p>At SRIS LAB, we focus on a wide range of research topics including but not limited to:</p>
+        <ul>
+            <li>Data Science and Machine Learning</li>
+            <li>Artificial Intelligence for Healthcare</li>
+            <li>Natural Language Processing and Text Mining</li>
+            <li>Big Data Analytics</li>
+            <li>Cybersecurity and Blockchain</li>
+            <li>Computational Biology and Bioinformatics</li>
+            <li>Information Retrieval and Data Quality Management</li>
+        </ul>
+    </section>
 
-            <div class="research-project">
-                <h3>2. Blockchain for Secure Data Exchange</h3>
-                <p>This research investigates the use of blockchain technology for secure and decentralized data exchange in critical fields such as healthcare and finance.</p>
-            </div>
+    <section id="ongoing-research">
+        <h2>Ongoing Research Projects</h2>
+        <p>Our lab is currently involved in various ongoing research projects aimed at addressing complex challenges in the world of data science and technology:</p>
+        <div class="research-project">
+            <h3>1. Predictive Analytics in Healthcare</h3>
+            <p>This project focuses on building predictive models that help in the early diagnosis and treatment of chronic diseases like diabetes and heart disease using machine learning algorithms.</p>
+        </div>
 
-            <div class="research-project">
-                <h3>3. Text Mining for Legal Documents</h3>
-                <p>We are developing advanced natural language processing techniques to analyze large collections of legal documents and extract meaningful insights for legal professionals and policymakers.</p>
-            </div>
+        <div class="research-project">
+            <h3>2. Blockchain for Secure Data Exchange</h3>
+            <p>This research investigates the use of blockchain technology for secure and decentralized data exchange in critical fields such as healthcare and finance.</p>
+        </div>
 
-            <!-- Add more projects as needed -->
-        </section>
-    </main>
+        <div class="research-project">
+            <h3>3. Text Mining for Legal Documents</h3>
+            <p>We are developing advanced natural language processing techniques to analyze large collections of legal documents and extract meaningful insights for legal professionals and policymakers.</p>
+        </div>
 
-    <footer>
-        <p>© 2024 SRIS LAB. All Rights Reserved.</p>
-    </footer>
+        <!-- Add more projects as needed -->
+    </section>
+</main>
+
+<footer>
+    <p>© 2024 SRIS LAB. All Rights Reserved.</p>
+</footer>
 </body>
 </html>
