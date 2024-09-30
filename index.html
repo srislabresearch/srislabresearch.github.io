@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,15 +32,6 @@
             margin: 0 auto;
         }
 
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #00853E;
-            color: white;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-        
         .about-lab {
             padding: 20px;
             background-color: #fff; /* Set the same background color for both the heading and text */
@@ -55,9 +47,10 @@
             text-align: justify;
             margin-top: 10px;
         }
-        
+
         .slideshow {
             grid-column: 2; /* Place it in the second column */
+            position: relative;
         }
 
         .slideshow-container img {
@@ -71,21 +64,18 @@
             margin-top: 10px;
         }
 
-        /* Highlight the arrows */
         .prev, .next {
             cursor: pointer;
             position: absolute;
             top: 50%;
-            width: auto;
             padding: 16px;
-            margin-top: -22px;
             color: white;
             font-weight: bold;
             font-size: 24px;
             transition: 0.6s ease;
             border-radius: 0 3px 3px 0;
             user-select: none;
-            background-color: rgba(0,0,0,0.5); /* Make the background semi-transparent */
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
         .next {
@@ -94,7 +84,7 @@
         }
 
         .prev:hover, .next:hover {
-            background-color: rgba(0,0,0,0.8); /* Make the arrows more visible when hovered */
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
         .news {
@@ -107,10 +97,11 @@
             padding: 10px 0;
             background-color: #00853E;
             color: white;
+            width: 100%;
         }
 
         @media (max-width: 768px) {
-            .main-container {
+            main {
                 grid-template-columns: 1fr; /* Stack columns into one on smaller screens */
             }
 
@@ -119,116 +110,124 @@
             }
         }
     </style>
-<header class="header-container">
-    <div class="header-content">
-        <a href="index.html">
-            <img src="Untitled Project (3).jpg" alt="SRIS Lab Icon" class="icon">
-        </a>
-        <nav aria-label="Main Navigation">
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="people.html">People</a></li>
-                <li><a href="publication.html">Publications</a></li>
-                <li><a href="grants.html" >Grants</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+</head>
 
-        <!-- Dropdown menu for mobile view -->
-        <div class="dropdown-menu-button" onclick="toggleDropdown()">Menu</div>
-        <div class="dropdown-content" id="dropdown-menu">
-            <a href="index.html" class="active">Home</a>
-            <a href="people.html">People</a>
-            <a href="publication.html">Publications</a>
-            <a href="grants.html">Grants</a>
-            <a href="research.html">Research</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
-    </div>
-</header>
-<script>
-    function toggleDropdown() {
-        var menu = document.getElementById("dropdown-menu");
-        menu.classList.toggle("show");
-    }
-</script>
-<main class="main-container">
-    <!-- About the Lab Section -->
-    <section class="about-lab">
-        <h2>About</h2>
-        <p>The Secure Reliable Intelligent Systems (SRIS) Lab The research lab, led by a prominent investigator with expertise in Data Management and Analytics, Security and Privacy, Edge Computing, Blockchain, and the Internet of Things, has garnered significant acclaim and funding. As either a principal investigator (PI) or co-PI, the lead researcher has successfully secured over $5 million from diverse sources such as NSF, NASA, and various universities. Projects have focused on innovative applications like robust multi-robot systems in dynamic environments and blockchain for system engineering. The lab's work spans practical and theoretical aspects, aiming to push the boundaries of how data and technology can be utilized in dynamic, real-world scenarios.</p>
-    </section>
+<body>
+    <header class="header-container">
+        <div class="header-content">
+            <a href="index.html">
+                <img src="Untitled Project (3).jpg" alt="SRIS Lab Icon" class="icon">
+            </a>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="publication.html">Publications</a></li>
+                    <li><a href="grants.html">Grants</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
 
-    <!-- Image slideshow section with captions -->
-    <section class="slideshow">
-        <div class="slideshow-container">
-            <!-- Full-width images with captions -->
-            <div class="slides fade">
-                <img src="Activity_img.png" alt="Image 1">
-                <div class="caption">Caption for Image 1</div>
+            <!-- Dropdown menu for mobile view -->
+            <div class="dropdown-menu-button" onclick="toggleDropdown()">Menu</div>
+            <div class="dropdown-content" id="dropdown-menu">
+                <a href="index.html" class="active">Home</a>
+                <a href="people.html">People</a>
+                <a href="publication.html">Publications</a>
+                <a href="grants.html">Grants</a>
+                <a href="research.html">Research</a>
+                <a href="contact.html">Contact Us</a>
             </div>
-
-            <div class="slides fade">
-                <img src="Activity2.png" alt="Image 2">
-                <div class="caption">Caption for Image 2</div>
-            </div>
-
-            <div class="slides fade">
-                <img src="image3.png" alt="Image 3">
-                <div class="caption">Caption for Image 3</div>
-            </div>
-
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-    </section>
+    </header>
 
-    <!-- News Section with improved layout -->
-    <section class="news">
-        <h2>News</h2>
-
-        <!-- First News Entry -->
-        <div class="news-entry">
-            <p><strong>Description:</strong> This project focuses on applying machine learning techniques to improve early detection of chronic diseases like diabetes and heart disease.</p>
-        </div>
-
-        <!-- Second News Entry -->
-        <div class="news-entry">
-            <h3>Grant Title: Blockchain for Secure Data Transactions</h3>
-            <p><strong>Description:</strong> Research focused on leveraging blockchain technology to ensure secure and decentralized data transactions in sensitive industries like healthcare and finance.</p>
-            <p><strong>Organization Funded:</strong> National Science Foundation (NSF)</p>
-            <p><strong>Amount:</strong> $750,000</p>
-        </div>
-    </section>
-
-</main>
-
-<script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    // Next/previous controls
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("slides");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
+    <script>
+        function toggleDropdown() {
+            var menu = document.getElementById("dropdown-menu");
+            menu.classList.toggle("show");
         }
-        slides[slideIndex-1].style.display = "block";  
-    }
-</script>
+    </script>
 
-<footer>
-    <p>© 2024 SRIS LAB. All Rights Reserved.</p>
-</footer>
+    <main>
+        <!-- About the Lab Section -->
+        <section class="about-lab">
+            <h2>About</h2>
+            <p>The Secure Reliable Intelligent Systems (SRIS) Lab, led by a prominent investigator with expertise in Data Management and Analytics, Security and Privacy, Edge Computing, Blockchain, and the Internet of Things, has garnered significant acclaim and funding...</p>
+        </section>
 
+        <!-- Image slideshow section with captions -->
+        <section class="slideshow">
+            <div class="slideshow-container">
+                <!-- Full-width images with captions -->
+                <div class="slides fade">
+                    <img src="Activity_img.png" alt="Image 1">
+                    <div class="caption">Caption for Image 1</div>
+                </div>
+
+                <div class="slides fade">
+                    <img src="Activity2.png" alt="Image 2">
+                    <div class="caption">Caption for Image 2</div>
+                </div>
+
+                <div class="slides fade">
+                    <img src="image3.png" alt="Image 3">
+                    <div class="caption">Caption for Image 3</div>
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        </section>
+
+        <!-- News Section with improved layout -->
+        <section class="news">
+            <h2>News</h2>
+
+            <!-- First News Entry -->
+            <div class="news-entry">
+                <p><strong>Description:</strong> This project focuses on applying machine learning techniques to improve early detection of chronic diseases...</p>
+            </div>
+
+            <!-- Second News Entry -->
+            <div class="news-entry">
+                <h3>Grant Title: Blockchain for Secure Data Transactions</h3>
+                <p><strong>Description:</strong> Research focused on leveraging blockchain technology to ensure secure and decentralized data transactions...</p>
+                <p><strong>Organization Funded:</strong> National Science Foundation (NSF)</p>
+                <p><strong>Amount:</strong> $750,000</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+    <footer>
+        <p>© 2024 SRIS LAB. All Rights Reserved.</p>
+    </footer>
 </body>
+
 </html>
