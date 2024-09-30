@@ -47,154 +47,51 @@
             margin: 0 auto;
         }
 
-        .icon {
-            max-height: 50px;
-        }
-
-        nav {
-            flex-grow: 1;
-            text-align: right;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap; /* Allow wrapping to avoid overlap */
-            margin: 0;
-            padding: 0;
-            line-height: 80px
-        }
-
-        .nav-links li {
-            margin-left: 20px;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 0; /* Add padding to increase clickable area */
-        }
-
+        /* Dropdown styling for mobile view */
         .dropdown-menu-button {
-            display: none; /* Hidden by default for desktop */
-            cursor: pointer;
+            display: none; /* Hidden by default */
+            background-color: #00853E;
             color: white;
-            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
         }
 
         .dropdown-content {
             display: none;
             flex-direction: column;
             background-color: #00853E;
-            position: absolute;
-            right: 20px;
-            top: 60px;
-            width: 150px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
+            width: 100%;
         }
 
         .dropdown-content a {
-            padding: 10px;
-            text-align: left;
             color: white;
+            padding: 10px 20px;
             text-decoration: none;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #00652e;
+            text-align: center;
+            display: block;
         }
 
         .dropdown-content.show {
             display: flex;
         }
 
-        main {
-            padding: 20px;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-
-        .person-img {
-            width: 150px;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        #director {
-            background-color: #f9f9f9; /* Light grey */
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-
-        #faculty {
-            background-color: #e0f7fa; /* Light blue */
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-
-        #students {
-            background-color: #fce4ec; /* Light pink */
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-
-        #alumni {
-            background-color: #e8f5e9; /* Light green */
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-        }
-
-        .person-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .person {
-            text-align: center;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #00853E;
-            color: white;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-
-        h2, h3 {
-            margin: 0 0 10px 0;
-        }
-
-        p {
-            margin: 10px 0;
-        }
-
         @media (max-width: 768px) {
-            nav {
-                display: none; /* Hide regular nav on mobile */
+            .header-container, footer {
+                padding: 10px;
             }
 
+            /* Show dropdown button on mobile */
             .dropdown-menu-button {
-                display: block; /* Show dropdown button on mobile */
+                display: block;
             }
 
-            .header-container {
-                flex-direction: column;
-            }
-
-            .person-grid {
-                grid-template-columns: 1fr;
+            nav ul {
+                display: none; /* Hide regular navigation */
             }
         }
     </style>
 </head>
+
 <body>
     <header class="header-container">
         <div class="header-content">
@@ -204,20 +101,21 @@
             <nav aria-label="Main Navigation">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="people.html" class="active">People</a></li>
+                    <li><a href="people.html">People</a></li>
                     <li><a href="publication.html">Publications</a></li>
-                    <li><a href="grants.html">Grants</a></li>
+                    <li><a href="grants.html"  class="active">Grants</a></li>
                     <li><a href="research.html">Research</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
 
+            <!-- Dropdown menu for mobile view -->
             <div class="dropdown-menu-button" onclick="toggleDropdown()">Menu</div>
             <div class="dropdown-content" id="dropdown-menu">
                 <a href="index.html">Home</a>
-                <a href="people.html" class="active">People</a>
+                <a href="people.html">People</a>
                 <a href="publication.html">Publications</a>
-                <a href="grants.html">Grants</a>
+                <a href="grants.html" class="active">Grants</a>
                 <a href="research.html">Research</a>
                 <a href="contact.html">Contact Us</a>
             </div>
