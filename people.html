@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,41 +21,30 @@
             align-items: center;
             max-width: 960px;
             margin: 0 auto;
-            flex-wrap: wrap; /* Allow wrapping for mobile */
         }
 
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
+        main {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column for better focus */
+            padding: 20px;
+            max-width: 960px;
+            margin: 0 auto;
         }
 
-        .icon {
-            max-height: 50px;
+        .talk-entry {
+            background-color: #f1f1f1;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
         }
 
-        nav {
-            flex-grow: 1;
-            text-align: right;
-        }
-
-        .nav-links a {
-            display: block;
-            padding: 10px 0; /* Set consistent padding for all links */
-            line-height: 20px; /* Ensure the line height is consistent */
-            height: 50px; /* Optional: set a fixed height to make all menu items uniform */
-        }
-
-
-        .nav-links li {
-            margin-left: 20px;
-        }
-
-        .nav-links a {
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #00853E;
             color: white;
-            text-decoration: none;
-        }
+            max-width: 960px;
+            margin: 0 auto;
 
         .dropdown-menu-button {
             display: none;
