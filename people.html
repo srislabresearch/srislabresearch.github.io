@@ -20,6 +20,72 @@
             align-items: center;
             max-width: 960px;
             margin: 0 auto;
+            flex-wrap: wrap; /* Allow wrapping for mobile */
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .icon {
+            max-height: 50px;
+        }
+
+        nav {
+            flex-grow: 1;
+            text-align: right;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown-menu-button {
+            display: none;
+            cursor: pointer;
+            color: white;
+        }
+
+        .dropdown-content {
+            display: none;
+            flex-direction: column;
+            background-color: #00853E;
+            position: absolute;
+            right: 20px;
+            top: 60px;
+            width: 150px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            padding: 10px;
+            text-align: left;
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #00652e;
+        }
+
+        .dropdown-content.show {
+            display: flex;
         }
 
         main {
@@ -28,50 +94,42 @@
             margin: 0 auto;
         }
 
-        /* Reduced image size */
         .person-img {
             width: 150px;
             height: auto;
             border-radius: 8px;
         }
 
-        /* Background colors for each section */
-        #director {
-            background-color: #f9f9f9; /* Light grey */
+        #director, #faculty, #students, #alumni {
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 8px;
+        }
+
+        #director {
+            background-color: #f9f9f9;
         }
 
         #faculty {
-            background-color: #e0f7fa; /* Light blue */
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
+            background-color: #e0f7fa;
         }
 
         #students {
-            background-color: #fce4ec; /* Light pink */
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
+            background-color: #fce4ec;
         }
 
         #alumni {
-            background-color: #e8f5e9; /* Light green */
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
+            background-color: #e8f5e9;
         }
 
         .person-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Three columns for images */
-            gap: 20px; /* Add space between the images */
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
 
         .person {
-            text-align: center; /* Center the text and image */
+            text-align: center;
         }
 
         footer {
@@ -83,9 +141,8 @@
             margin: 0 auto;
         }
 
-        /* Remove black line by adjusting padding/margin */
         h2, h3 {
-            margin: 0 0 10px 0; /* Control margin below headings */
+            margin: 0 0 10px 0;
         }
 
         p {
@@ -94,11 +151,19 @@
 
         @media (max-width: 768px) {
             .person-grid {
-                grid-template-columns: 1fr; /* Stack images in one column on small screens */
+                grid-template-columns: 1fr;
             }
 
-            .header-container, footer {
-                padding: 10px;
+            nav {
+                display: none;
+            }
+
+            .dropdown-menu-button {
+                display: block;
+            }
+
+            .header-container {
+                flex-direction: column;
             }
         }
     </style>
@@ -120,7 +185,6 @@
                 </ul>
             </nav>
 
-            <!-- Dropdown menu for mobile view -->
             <div class="dropdown-menu-button" onclick="toggleDropdown()">Menu</div>
             <div class="dropdown-content" id="dropdown-menu">
                 <a href="index.html">Home</a>
@@ -132,8 +196,8 @@
             </div>
         </div>
     </header>
+
 <main>
-    <!-- Director Section with background color -->
     <section id="director">
         <h2>Director</h2>
         <div class="person">
@@ -142,7 +206,6 @@
         </div>
     </section>
 
-    <!-- Faculty Section with background color and 3 columns per row -->
     <section id="faculty">
         <h2>Faculty Members</h2>
         <div class="person-grid">
@@ -161,10 +224,8 @@
         </div>
     </section>
 
-    <!-- Students Section with background color and 3 columns per row -->
     <section id="students">
         <h2>Students</h2>
-
         <h3>Ph.D. Students</h3>
         <div class="person-grid">
             <div class="person">
@@ -214,7 +275,6 @@
         </div>
     </section>
 
-    <!-- Alumni Section with background color and 3 columns per row -->
     <section id="alumni">
         <h2>Alumni</h2>
         <div class="person-grid">
@@ -224,17 +284,21 @@
             </div>
             <div class="person">
                 <img src="images/alumni2.png" alt="Alumni 2" class="person-img">
-                <p><strong>Alumni 2</strong><br>Previous
-    <footer>
-        <p>© 2024 SRIS LAB. All Rights Reserved.</p>
-    </footer>
+                <p><strong>Alumni 2</strong><br>Previous Role or Program</p>
+            </div>
+        </div>
+    </section>
+</main>
 
-    <script>
-        function toggleDropdown() {
-            var menu = document.getElementById("dropdown-menu");
-            menu.classList.toggle("show");
-        }
-    </script>
+<footer>
+    <p>© 2024 SRIS LAB. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function toggleDropdown() {
+        var menu = document.getElementById("dropdown-menu");
+        menu.classList.toggle("show");
+    }
+</script>
 </body>
-
 </html>
