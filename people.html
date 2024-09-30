@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,35 +20,48 @@
             align-items: center;
             max-width: 960px;
             margin: 0 auto;
+            flex-wrap: wrap; /* Allow wrapping to avoid overflow */
         }
 
-        main {
-            display: grid;
-            grid-template-columns: 1fr; /* Single column for better focus */
-            padding: 20px;
-            max-width: 960px;
-            margin: 0 auto;
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
         }
 
-        .talk-entry {
-            background-color: #f1f1f1;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 8px;
+        .icon {
+            max-height: 50px;
         }
 
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #00853E;
+        nav {
+            flex-grow: 1;
+            text-align: right;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping to avoid overlap */
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
             color: white;
-            max-width: 960px;
-            margin: 0 auto;
+            text-decoration: none;
+            padding: 10px 0; /* Add padding to increase clickable area */
+        }
 
         .dropdown-menu-button {
-            display: none;
+            display: none; /* Hidden by default for desktop */
             cursor: pointer;
             color: white;
+            font-size: 18px;
         }
 
         .dropdown-content {
@@ -91,26 +103,32 @@
             border-radius: 8px;
         }
 
-        #director, #faculty, #students, #alumni {
+        #director {
+            background-color: #f9f9f9; /* Light grey */
             padding: 20px;
             margin-bottom: 20px;
             border-radius: 8px;
         }
 
-        #director {
-            background-color: #f9f9f9;
-        }
-
         #faculty {
-            background-color: #e0f7fa;
+            background-color: #e0f7fa; /* Light blue */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
         }
 
         #students {
-            background-color: #fce4ec;
+            background-color: #fce4ec; /* Light pink */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
         }
 
         #alumni {
-            background-color: #e8f5e9;
+            background-color: #e8f5e9; /* Light green */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
         }
 
         .person-grid {
@@ -141,20 +159,20 @@
         }
 
         @media (max-width: 768px) {
-            .person-grid {
-                grid-template-columns: 1fr;
-            }
-
             nav {
-                display: none;
+                display: none; /* Hide regular nav on mobile */
             }
 
             .dropdown-menu-button {
-                display: block;
+                display: block; /* Show dropdown button on mobile */
             }
 
             .header-container {
                 flex-direction: column;
+            }
+
+            .person-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
