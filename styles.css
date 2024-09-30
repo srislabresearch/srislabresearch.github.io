@@ -121,6 +121,56 @@ main {
     }
 }
 
+/* Hide the original navigation on smaller screens */
+@media only screen and (max-width: 768px) {
+    nav {
+        display: none; /* Hide original nav */
+    }
+
+    /* Dropdown menu button styling */
+    .dropdown-menu-button {
+        display: block;
+        background-color: #00853E;
+        color: white;
+        padding: 10px 20px;
+        cursor: pointer;
+        text-align: center;
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    /* The dropdown menu itself */
+    .dropdown-content {
+        display: none;
+        flex-direction: column;
+        background-color: #00853E;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+    }
+
+    /* Show the dropdown when it is active */
+    .dropdown-content.show {
+        display: flex;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f4d03f;
+        color: black;
+    }
+}
+
+
 
 
 button {
