@@ -103,9 +103,9 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="people.html">People</a></li>
                     <li><a href="publication.html">Publications</a></li>
-                    <li><a href="grants.html">Grants</a></li>
+                    <li><a href="grants.html"  class="active">Grants</a></li>
                     <li><a href="research.html">Research</a></li>
-                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
 
@@ -115,9 +115,9 @@
                 <a href="index.html">Home</a>
                 <a href="people.html">People</a>
                 <a href="publication.html">Publications</a>
-                <a href="grants.html">Grants</a>
+                <a href="grants.html" class="active">Grants</a>
                 <a href="research.html">Research</a>
-                <a href="contact.html" class="active">Contact Us</a>
+                <a href="contact.html">Contact Us</a>
             </div>
         </div>
     </header>
@@ -153,11 +153,16 @@
         <li>SC'13 HPC Educator Travel Award, 2013, about $2000 awarded</li>
     </ul>
 </main>
-
-<footer>
+    <footer>
         <p>© 2024 SRIS LAB. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        function toggleDropdown() {
+            var menu = document.getElementById("dropdown-menu");
+            menu.classList.toggle("show");
+        }
+    </script>
 </body>
 
 </html>
