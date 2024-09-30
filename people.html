@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,18 +23,55 @@
         }
 
         main {
-            display: grid;
-            grid-template-columns: 1fr; /* Single column for better focus */
             padding: 20px;
             max-width: 960px;
             margin: 0 auto;
         }
 
-        .talk-entry {
-            background-color: #f1f1f1;
-            margin: 10px 0;
-            padding: 10px;
+        /* Reduced image size */
+        .person-img {
+            width: 150px;
+            height: auto;
             border-radius: 8px;
+        }
+
+        /* Background colors for each section */
+        #director {
+            background-color: #f9f9f9; /* Light grey */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        #faculty {
+            background-color: #e0f7fa; /* Light blue */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        #students {
+            background-color: #fce4ec; /* Light pink */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        #alumni {
+            background-color: #e8f5e9; /* Light green */
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .person-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns for images */
+            gap: 20px; /* Add space between the images */
+        }
+
+        .person {
+            text-align: center; /* Center the text and image */
         }
 
         footer {
@@ -47,51 +83,26 @@
             margin: 0 auto;
         }
 
-        /* Dropdown styling for mobile view */
-        .dropdown-menu-button {
-            display: none; /* Hidden by default */
-            background-color: #00853E;
-            color: white;
-            padding: 10px 20px;
-            cursor: pointer;
+        /* Remove black line by adjusting padding/margin */
+        h2, h3 {
+            margin: 0 0 10px 0; /* Control margin below headings */
         }
 
-        .dropdown-content {
-            display: none;
-            flex-direction: column;
-            background-color: #00853E;
-            width: 100%;
-        }
-
-        .dropdown-content a {
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            text-align: center;
-            display: block;
-        }
-
-        .dropdown-content.show {
-            display: flex;
+        p {
+            margin: 10px 0;
         }
 
         @media (max-width: 768px) {
+            .person-grid {
+                grid-template-columns: 1fr; /* Stack images in one column on small screens */
+            }
+
             .header-container, footer {
                 padding: 10px;
-            }
-
-            /* Show dropdown button on mobile */
-            .dropdown-menu-button {
-                display: block;
-            }
-
-            nav ul {
-                display: none; /* Hide regular navigation */
             }
         }
     </style>
 </head>
-
 <body>
     <header class="header-container">
         <div class="header-content">
