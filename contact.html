@@ -67,8 +67,26 @@
                 <li><a href="contact.html" class="active">Contact Us</a></li>
             </ul>
         </nav>
+
+        <!-- Dropdown menu for mobile view -->
+        <div class="dropdown-menu-button" onclick="toggleDropdown()">Menu</div>
+        <div class="dropdown-content" id="dropdown-menu">
+            <a href="index.html">Home</a>
+            <a href="people.html">People</a>
+            <a href="publication.html">Publications</a>
+            <a href="grants.html">Grants</a>
+            <a href="research.html">Research</a>
+            <a href="contact.html" class="active">Contact Us</a>
+        </div>
     </div>
 </header>
+<script>
+    function toggleDropdown() {
+        var menu = document.getElementById("dropdown-menu");
+        menu.classList.toggle("show");
+    }
+</script>
+
 <main>
     <section id="contact-info">
         <h2>Contact Information</h2>
