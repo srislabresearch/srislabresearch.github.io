@@ -59,24 +59,17 @@
 
     .person {
         text-align: center;
-        background-color: white;
         padding: 20px;
-        border-radius: 15px; /* Curved edges on the container box */
+        border-radius: 15px; /* Curved edges for the container box */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for better visual */
     }
 
     .person-img {
-        width: 100%; /* Full width of the grid item */
-        max-width: 150px; /* Limit the maximum size */
-        height: auto;
+        width: 150px; /* Fixed width */
+        height: 150px; /* Fixed height to make it square */
+        border-radius: 10px; /* Slight curve on the edges */
+        object-fit: cover; /* Ensures the image fits well inside the square without stretching */
         margin-bottom: 10px;
-        border-radius: 50%; /* Circular image for a rounded profile look */
-    }
-
-    /* Centering single image */
-    .person-grid.single-item {
-        display: flex;
-        justify-content: center;
     }
 
     footer {
