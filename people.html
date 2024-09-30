@@ -6,90 +6,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SRIS LAB</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        .header-container {
-            background-color: #00853E;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 960px;
-            margin: 0 auto;
-        }
+    .header-container {
+        background-color: #00853E;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 960px;
+        margin: 0 auto;
+    }
 
-        main {
-            display: grid;
-            grid-template-columns: 1fr; /* Single column for better focus */
-            padding: 20px;
-            max-width: 960px;
-            margin: 0 auto;
-        }
+    main {
+        padding: 20px;
+        max-width: 960px;
+        margin: 0 auto;
+    }
 
-        .talk-entry {
-            background-color: #f1f1f1;
-            margin: 10px 0;
+    /* Section-specific background colors */
+    #director {
+        background-color: #f1f1f1;
+        padding: 20px;
+    }
+
+    #faculty {
+        background-color: #e0f7fa;
+        padding: 20px;
+    }
+
+    #students {
+        background-color: #fff9c4;
+        padding: 20px;
+    }
+
+    #alumni {
+        background-color: #ffe0b2;
+        padding: 20px;
+    }
+
+    /* Grid layout for person images and content */
+    .person-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .person {
+        text-align: center;
+    }
+
+    .person-img {
+        width: 100%; /* Full width of the grid item */
+        max-width: 150px; /* Limit the maximum size */
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    /* Centering single image */
+    .person-grid.single-item {
+        display: flex;
+        justify-content: center;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #00853E;
+        color: white;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    /* Dropdown styling for mobile view */
+    .dropdown-menu-button {
+        display: none; /* Hidden by default */
+        background-color: #00853E;
+        color: white;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
+    .dropdown-content {
+        display: none;
+        flex-direction: column;
+        background-color: #00853E;
+        width: 100%;
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        text-align: center;
+        display: block;
+    }
+
+    .dropdown-content.show {
+        display: flex;
+    }
+
+    @media (max-width: 768px) {
+        .header-container, footer {
             padding: 10px;
-            border-radius: 8px;
         }
 
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #00853E;
-            color: white;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-
-        /* Dropdown styling for mobile view */
+        /* Show dropdown button on mobile */
         .dropdown-menu-button {
-            display: none; /* Hidden by default */
-            background-color: #00853E;
-            color: white;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-
-        .dropdown-content {
-            display: none;
-            flex-direction: column;
-            background-color: #00853E;
-            width: 100%;
-        }
-
-        .dropdown-content a {
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            text-align: center;
             display: block;
         }
 
-        .dropdown-content.show {
-            display: flex;
+        nav ul {
+            display: none; /* Hide regular navigation */
         }
 
-        @media (max-width: 768px) {
-            .header-container, footer {
-                padding: 10px;
-            }
-
-            /* Show dropdown button on mobile */
-            .dropdown-menu-button {
-                display: block;
-            }
-
-            nav ul {
-                display: none; /* Hide regular navigation */
-            }
+        /* Stack images in one column on small screens */
+        .person-grid {
+            grid-template-columns: 1fr;
         }
-    </style>
+    }
+</style>
 </head>
 
 <body>
