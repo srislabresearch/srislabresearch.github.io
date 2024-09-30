@@ -1,142 +1,129 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SRIS LAB</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .header-container {
-            background-color: #00853E;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 960px;
-            margin: 0 auto;
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
-        }
+.header-container {
+    background-color: #00853E;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
 
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 
-        .icon {
-            max-height: 50px;
-        }
+.icon {
+    max-height: 50px;
+}
 
-        nav {
-            flex-grow: 1;
-            text-align: right;
-        }
+nav {
+    flex-grow: 1;
+    text-align: right;
+}
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
 
-        .nav-links li {
-            margin-left: 20px;
-        }
+.nav-links li {
+    margin-left: 20px;
+}
 
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-        }
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0; /* Consistent padding for menu links */
+    line-height: 50px; /* Consistent height for the menu items */
+}
 
-        .dropdown-menu-button {
-            display: none;
-            cursor: pointer;
-            color: white;
-            font-size: 18px;
-        }
+.dropdown-menu-button {
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
 
-        .dropdown-content {
-            display: none;
-            flex-direction: column;
-            background-color: #00853E;
-            position: absolute;
-            right: 20px;
-            top: 60px;
-            width: 150px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    background-color: #00853E;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
 
-        .dropdown-content a {
-            padding: 10px;
-            text-align: left;
-            color: white;
-            text-decoration: none;
-        }
+.dropdown-content a {
+    padding: 10px;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+}
 
-        .dropdown-content a:hover {
-            background-color: #00652e;
-        }
+.dropdown-content a:hover {
+    background-color: #00652e;
+}
 
-        .dropdown-content.show {
-            display: flex;
-        }
+.dropdown-content.show {
+    display: flex;
+}
 
-        main {
-            display: grid;
-            grid-template-columns: 1fr; /* Single column for better focus */
-            padding: 20px;
-            max-width: 960px;
-            margin: 0 auto;
-        }
+main {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for better focus */
+    padding: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
 
-        .talk-entry {
-            background-color: #f1f1f1;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 8px;
-        }
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #00853E;
+    color: white;
+    max-width: 960px;
+    margin: 0 auto;
+}
 
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #00853E;
-            color: white;
-            max-width: 960px;
-            margin: 0 auto;
-        }
+/* Responsive styling */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Hide desktop menu on mobile */
+    }
 
-        /* Responsive styling */
-        @media (max-width: 768px) {
-            nav {
-                display: none; /* Hide desktop menu on mobile */
-            }
+    .dropdown-menu-button {
+        display: block; /* Show dropdown menu button */
+    }
 
-            .dropdown-menu-button {
-                display: block; /* Show dropdown menu button */
-            }
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-            .header-container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+    .dropdown-content {
+        display: none; /* Hide dropdown by default */
+    }
 
-            .dropdown-content {
-                display: none; /* Hide dropdown by default */
-            }
+    .dropdown-content.show {
+        display: flex; /* Show dropdown when triggered */
+    }
+}
 
-            .dropdown-content.show {
-                display: flex; /* Show dropdown when triggered */
-            }
-        }
-    </style>
 </head>
 <body>
 <header class="header-container">
