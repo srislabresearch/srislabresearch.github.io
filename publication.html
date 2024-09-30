@@ -7,90 +7,183 @@
     <title>SRIS LAB</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .header-container {
-            background-color: #00853E;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 960px;
-            margin: 0 auto;
-        }
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        main {
-            display: grid;
-            grid-template-columns: 1fr; /* Single column for better focus */
-            padding: 20px;
-            max-width: 960px;
-            margin: 0 auto;
-        }
+/* Header styling */
+.header-container {
+    background-color: #00853E;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+}
 
-        .talk-entry {
-            background-color: #f1f1f1;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 8px;
-        }
+.icon {
+    max-height: 50px;
+}
 
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #00853E;
-            color: white;
-            max-width: 960px;
-            margin: 0 auto;
-        }
+nav {
+    flex-grow: 1;
+    text-align: right;
+}
 
-        /* Dropdown styling for mobile view */
-        .dropdown-menu-button {
-            display: none; /* Hidden by default */
-            background-color: #00853E;
-            color: white;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
 
-        .dropdown-content {
-            display: none;
-            flex-direction: column;
-            background-color: #00853E;
-            width: 100%;
-        }
+.nav-links li {
+    margin-left: 20px;
+}
 
-        .dropdown-content a {
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            text-align: center;
-            display: block;
-        }
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0; /* Consistent padding */
+    line-height: 50px; /* Consistent height */
+    display: block;
+}
 
-        .dropdown-content.show {
-            display: flex;
-        }
+.nav-links a.active {
+    font-weight: bold;
+    background-color: #f4d03f;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: #000;
+}
 
-        @media (max-width: 768px) {
-            .header-container, footer {
-                padding: 10px;
-            }
+/* Dropdown menu button styling */
+.dropdown-menu-button {
+    display: none; /* Hidden by default */
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
 
-            /* Show dropdown button on mobile */
-            .dropdown-menu-button {
-                display: block;
-            }
+/* Dropdown menu content */
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    background-color: #00853E;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    width: 150px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
 
-            nav ul {
-                display: none; /* Hide regular navigation */
-            }
-        }
-    </style>
-</head>
+.dropdown-content a {
+    padding: 10px;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #00652e;
+}
+
+.dropdown-content.show {
+    display: flex;
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.person-img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+#director, #faculty, #students, #alumni {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+#director {
+    background-color: #f9f9f9;
+}
+
+#faculty {
+    background-color: #e0f7fa;
+}
+
+#students {
+    background-color: #fce4ec;
+}
+
+#alumni {
+    background-color: #e8f5e9;
+}
+
+.person-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.person {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #00853E;
+    color: white;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h2, h3 {
+    margin: 0 0 10px 0;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Hide regular nav on mobile */
+    }
+
+    .dropdown-menu-button {
+        display: block; /* Show dropdown button on mobile */
+    }
+
+    .header-container {
+        flex-direction: column;
+    }
+
+    .person-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 <body>
     <header class="header-container">
