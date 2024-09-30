@@ -1,167 +1,126 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-.header-container {
-    background-color: #00853E;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 960px;
-    margin: 0 auto;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRIS LAB</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
+        .header-container {
+            background-color: #00853E;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 960px;
+            margin: 0 auto;
+        }
 
-.icon {
-    max-height: 50px;
-}
+        main {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column for better focus */
+            padding: 20px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
 
-nav {
-    flex-grow: 1;
-    text-align: right;
-}
+        .talk-entry {
+            background-color: #f1f1f1;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
+        }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #00853E;
+            color: white;
+            max-width: 960px;
+            margin: 0 auto;
+        }
 
-.nav-links li {
-    margin-left: 20px;
-}
+        /* Dropdown styling for mobile view */
+        .dropdown-menu-button {
+            display: none; /* Hidden by default */
+            background-color: #00853E;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 0; /* Consistent padding for menu links */
-    line-height: 50px; /* Consistent height for the menu items */
-}
+        .dropdown-content {
+            display: none;
+            flex-direction: column;
+            background-color: #00853E;
+            width: 100%;
+        }
 
-.dropdown-menu-button {
-    display: none;
-    cursor: pointer;
-    color: white;
-    font-size: 18px;
-}
+        .dropdown-content a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
 
-.dropdown-content {
-    display: none;
-    flex-direction: column;
-    background-color: #00853E;
-    position: absolute;
-    right: 20px;
-    top: 60px;
-    width: 150px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
+        .dropdown-content.show {
+            display: flex;
+        }
 
-.dropdown-content a {
-    padding: 10px;
-    text-align: left;
-    color: white;
-    text-decoration: none;
-}
+        @media (max-width: 768px) {
+            .header-container, footer {
+                padding: 10px;
+            }
 
-.dropdown-content a:hover {
-    background-color: #00652e;
-}
+            /* Show dropdown button on mobile */
+            .dropdown-menu-button {
+                display: block;
+            }
 
-.dropdown-content.show {
-    display: flex;
-}
-
-main {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column for better focus */
-    padding: 20px;
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #00853E;
-    color: white;
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-/* Responsive styling */
-@media (max-width: 768px) {
-    nav {
-        display: none; /* Hide desktop menu on mobile */
-    }
-
-    .dropdown-menu-button {
-        display: block; /* Show dropdown menu button */
-    }
-
-    .header-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .dropdown-content {
-        display: none; /* Hide dropdown by default */
-    }
-
-    .dropdown-content.show {
-        display: flex; /* Show dropdown when triggered */
-    }
-}
-
+            nav ul {
+                display: none; /* Hide regular navigation */
+            }
+        }
+    </style>
 </head>
+
 <body>
-<header class="header-container">
-    <div class="header-content">
-        <a href="index.html">
-            <img src="Untitled Project (3).jpg" alt="SRIS Lab Icon" class="icon">
-        </a>
-        <nav aria-label="Main Navigation">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="people.html">People</a></li>
-                <li><a href="publication.html" class="active">Publications</a></li>
-                <li><a href="grants.html">Grants</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+    <header class="header-container">
+        <div class="header-content">
+            <a href="index.html">
+                <img src="Untitled Project (3).jpg" alt="SRIS Lab Icon" class="icon">
+            </a>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="publication.html">Publications</a></li>
+                    <li><a href="grants.html">Grants</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </nav>
 
-        <!-- Dropdown menu for mobile view -->
-        <div class="dropdown-menu-button" onclick="toggleDropdown()">Menu</div>
-        <div class="dropdown-content" id="dropdown-menu">
-            <a href="index.html">Home</a>
-            <a href="people.html">People</a>
-            <a href="publication.html" class="active">Publications</a>
-            <a href="grants.html">Grants</a>
-            <a href="research.html">Research</a>
-            <a href="contact.html">Contact Us</a>
+            <!-- Dropdown menu for mobile view -->
+            <div class="dropdown-menu-button" onclick="toggleDropdown()">Menu</div>
+            <div class="dropdown-content" id="dropdown-menu">
+                <a href="index.html">Home</a>
+                <a href="people.html">People</a>
+                <a href="publication.html">Publications</a>
+                <a href="grants.html">Grants</a>
+                <a href="research.html">Research</a>
+                <a href="contact.html" class="active">Contact Us</a>
+            </div>
         </div>
-    </div>
-</header>
-
-<script>
-    function toggleDropdown() {
-        var menu = document.getElementById("dropdown-menu");
-        menu.classList.toggle("show");
-    }
-</script>
-
+    </header>
     <main>
         <section id="publications">
             <h2>Publications</h2>
@@ -239,4 +198,13 @@ footer {
     <footer>
         <p>© 2024 SRIS LAB. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        function toggleDropdown() {
+            var menu = document.getElementById("dropdown-menu");
+            menu.classList.toggle("show");
+        }
+    </script>
 </body>
+
+</html>
