@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,8 +24,6 @@
         }
 
         main {
-            display: grid;
-            grid-template-columns: 1fr; /* Single column for better focus */
             padding: 20px;
             max-width: 960px;
             margin: 0 auto;
@@ -37,11 +36,22 @@
 
         h2 {
             text-decoration: underline;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
         h3 {
             margin-top: 20px;
-            margin-bottom: 2px; /* Add 1pt space between the two sections */
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+            list-style-type: disc;
         }
 
         footer {
@@ -53,46 +63,94 @@
             margin: 0 auto;
         }
 
+        /* Dropdown menu styles */
+        .dropdown-menu-button {
+            display: none;
+            background-color: #00853E;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            background-color: #00853E;
+            padding: 10px;
+            position: absolute;
+            top: 60px;
+            width: 100%;
+            z-index: 1;
+            flex-direction: column;
+        }
+
+        .dropdown-content a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .dropdown-content.show {
+            display: flex;
+        }
+
+        /* Media Query for smaller screens */
         @media (max-width: 768px) {
-            .header-container, footer {
-                padding: 10px;
+            nav ul {
+                display: none; /* Hide the menu on mobile */
+            }
+
+            .dropdown-menu-button {
+                display: block; /* Show dropdown button */
+            }
+
+            .header-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header-container img {
+                margin-bottom: 10px;
             }
         }
     </style>
-<header class="header-container">
-    <div class="header-content">
-        <a href="index.html">
-            <img src="Untitled Project (3).jpg" alt="SRIS Lab Icon" class="icon">
-        </a>
-        <nav aria-label="Main Navigation">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="people.html">People</a></li>
-                <li><a href="publication.html">Publications</a></li>
-                <li><a href="grants.html" class="active">Grants</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+</head>
 
-        <!-- Dropdown menu for mobile view -->
-        <div class="dropdown-menu-button" onclick="toggleDropdown()">Menu</div>
-        <div class="dropdown-content" id="dropdown-menu">
-            <a href="index.html">Home</a>
-            <a href="people.html">People</a>
-            <a href="publication.html">Publications</a>
-            <a href="grants.html" class="active">Grants</a>
-            <a href="research.html">Research</a>
-            <a href="contact.html">Contact Us</a>
+<body>
+    <header class="header-container">
+        <div class="header-content">
+            <a href="index.html">
+                <img src="Untitled Project (3).jpg" alt="SRIS Lab Icon" class="icon">
+            </a>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="publication.html">Publications</a></li>
+                    <li><a href="grants.html" class="active">Grants</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Dropdown menu for mobile view -->
+            <div class="dropdown-menu-button" onclick="toggleDropdown()">Menu</div>
+            <div class="dropdown-content" id="dropdown-menu">
+                <a href="index.html">Home</a>
+                <a href="people.html">People</a>
+                <a href="publication.html">Publications</a>
+                <a href="grants.html" class="active">Grants</a>
+                <a href="research.html">Research</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
         </div>
-    </div>
-</header>
-<script>
-    function toggleDropdown() {
-        var menu = document.getElementById("dropdown-menu");
-        menu.classList.toggle("show");
-    }
-</script>
+    </header>
+
+    <script>
+        function toggleDropdown() {
+            var menu = document.getElementById("dropdown-menu");
+            menu.classList.toggle("show");
+        }
+    </script>
 <main>
     <h2>Grants and Awards</h2>
 
@@ -127,8 +185,9 @@
 </main>
 
 <footer>
-    <p>© 2024 SRIS LAB. All Rights Reserved.</p>
-</footer>
+        <p>© 2024 SRIS LAB. All Rights Reserved.</p>
+    </footer>
 
 </body>
+
 </html>
