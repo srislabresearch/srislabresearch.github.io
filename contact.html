@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,60 +47,101 @@
             margin: 0 auto;
         }
 
+        /* Dropdown styling for mobile view */
+        .dropdown-menu-button {
+            display: none; /* Hidden by default */
+            background-color: #00853E;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            flex-direction: column;
+            background-color: #00853E;
+            width: 100%;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+
+        .dropdown-content.show {
+            display: flex;
+        }
+
         @media (max-width: 768px) {
             .header-container, footer {
                 padding: 10px;
             }
+
+            /* Show dropdown button on mobile */
+            .dropdown-menu-button {
+                display: block;
+            }
+
+            nav ul {
+                display: none; /* Hide regular navigation */
+            }
         }
     </style>
-<header class="header-container">
-    <div class="header-content">
-        <a href="index.html">
-            <img src="Untitled Project (3).jpg" alt="SRIS Lab Icon" class="icon">
-        </a>
-        <nav aria-label="Main Navigation">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="people.html">People</a></li>
-                <li><a href="publication.html">Publications</a></li>
-                <li><a href="grants.html">Grants</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="contact.html" class="active">Contact Us</a></li>
-            </ul>
-        </nav>
+</head>
 
-        <!-- Dropdown menu for mobile view -->
-        <div class="dropdown-menu-button" onclick="toggleDropdown()">Menu</div>
-        <div class="dropdown-content" id="dropdown-menu">
-            <a href="index.html">Home</a>
-            <a href="people.html">People</a>
-            <a href="publication.html">Publications</a>
-            <a href="grants.html">Grants</a>
-            <a href="research.html">Research</a>
-            <a href="contact.html" class="active">Contact Us</a>
+<body>
+    <header class="header-container">
+        <div class="header-content">
+            <a href="index.html">
+                <img src="Untitled Project (3).jpg" alt="SRIS Lab Icon" class="icon">
+            </a>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="publication.html">Publications</a></li>
+                    <li><a href="grants.html">Grants</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Dropdown menu for mobile view -->
+            <div class="dropdown-menu-button" onclick="toggleDropdown()">Menu</div>
+            <div class="dropdown-content" id="dropdown-menu">
+                <a href="index.html">Home</a>
+                <a href="people.html">People</a>
+                <a href="publication.html">Publications</a>
+                <a href="grants.html">Grants</a>
+                <a href="research.html">Research</a>
+                <a href="contact.html" class="active">Contact Us</a>
+            </div>
         </div>
-    </div>
-</header>
-<script>
-    function toggleDropdown() {
-        var menu = document.getElementById("dropdown-menu");
-        menu.classList.toggle("show");
-    }
-</script>
+    </header>
 
-<main>
-    <section id="contact-info">
-        <h2>Contact Information</h2>
-        <p><strong>Lab Director:</strong> Dr. Kewei Sha</p>
-        <p><strong>Lab Manager:</strong> Komal Cherukuri</p>
-        <p><strong>Email:</strong> <a href="mailto:srislab.research@gmail.com">srislab.research@gmail.com</a></p>
-        <p><strong>Address:</strong> University of North Texas Discovery Park, 3940 N Elm St, Denton, TX 76207</p>
-    </section>
-</main>
+    <main>
+        <section id="contact-info">
+            <h2>Contact Information</h2>
+            <p><strong>Lab Director:</strong> Dr. Kewei Sha</p>
+            <p><strong>Lab Manager:</strong> Komal Cherukuri</p>
+            <p><strong>Email:</strong> <a href="mailto:srislab.research@gmail.com">srislab.research@gmail.com</a></p>
+            <p><strong>Address:</strong> University of North Texas Discovery Park, 3940 N Elm St, Denton, TX 76207</p>
+        </section>
+    </main>
 
-<footer>
-    <p>© 2024 SRIS LAB. All Rights Reserved.</p>
-</footer>
+    <footer>
+        <p>© 2024 SRIS LAB. All Rights Reserved.</p>
+    </footer>
 
+    <script>
+        function toggleDropdown() {
+            var menu = document.getElementById("dropdown-menu");
+            menu.classList.toggle("show");
+        }
+    </script>
 </body>
+
 </html>
