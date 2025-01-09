@@ -23,21 +23,14 @@
             margin: 0 auto;
         }
 
-        .icon {
-            width: 150px; /* Adjust the width as needed */
-            height: auto; /* Maintain aspect ratio */
-        }
-
-
         main {
             display: grid;
-            grid-template-columns: 1fr 1fr; /* Two columns for about and slideshow */
-            gap: 20px; /* Add space between columns */
+            grid-template-columns: 1fr; /* Single column for better focus */
             padding: 20px;
             max-width: 960px;
             margin: 0 auto;
         }
-        
+
         .talk-entry {
             background-color: #f1f1f1;
             margin: 10px 0;
@@ -54,7 +47,35 @@
             margin: 0 auto;
         }
 
-        about-lab {
+        /* Dropdown styling for mobile view */
+        .dropdown-menu-button {
+            display: none; /* Hidden by default */
+            background-color: #00853E;
+            color: white;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .dropdown-content {
+            display: none;
+            flex-direction: column;
+            background-color: #00853E;
+            width: 100%;
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+
+        .dropdown-content.show {
+            display: flex;
+        }
+
+                about-lab {
             padding: 20px;
             background-color: #fff; /* Set the same background color for both the heading and text */
             grid-column: 1; /* Place it in the first column */
@@ -186,25 +207,24 @@
             </a>
             <nav aria-label="Main Navigation">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="people.html">People</a></li>
                     <li><a href="publication.html">Publications</a></li>
                     <li><a href="grants.html">Grants</a></li>
                     <li><a href="research.html">Research</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
                 </ul>
             </nav>
-
 
             <!-- Dropdown menu for mobile view -->
             <div class="dropdown-menu-button" onclick="toggleDropdown()">Menu</div>
             <div class="dropdown-content" id="dropdown-menu">
-                <a href="index.html" class="active">Home</a>
+                <a href="index.html">Home</a>
                 <a href="people.html">People</a>
                 <a href="publication.html">Publications</a>
                 <a href="grants.html">Grants</a>
                 <a href="research.html">Research</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="contact.html" class="active">Contact Us</a>
             </div>
         </div>
     </header>
