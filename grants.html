@@ -32,7 +32,7 @@
 
         .grants-container {
             display: grid;
-            grid-template-columns: 1fr; /* Single column layout by default */
+            grid-template-columns: 1fr; /* Force single column layout */
             gap: 20px; /* Add spacing between sections */
         }
 
@@ -101,17 +101,6 @@
 
         .dropdown-content.show {
             display: flex;
-        }
-
-        /* Adjust layout for larger screens */
-        @media (min-width: 768px) {
-            .grants-container {
-                grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
-            }
-
-            .grants-section {
-                min-height: 300px; /* Add consistent height for columns */
-            }
         }
     </style>
 
