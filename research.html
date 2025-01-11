@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,63 +28,43 @@
 
         main {
             display: grid;
-            grid-template-columns: 1fr; /* Single column layout */
-            gap: 20px; /* Space between grids */
+            grid-template-columns: 1fr; /* Single column for better focus */
             padding: 20px;
-            max-width: 1200px;
+            max-width: 960px;
             margin: 0 auto;
         }
 
-        .research-box {
-            display: grid;
-            grid-template-columns: 1fr 2fr; /* Image and text layout */
-            width: 100%;
-            height: 400px; /* Fixed height for Grid 1 and 3 */
-            border-radius: 10px;
-            background-color: #f9f9f9;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            align-items: center;
-            overflow: hidden;
-        }
-
-        .research-box.large {
-            height: 500px; /* Fixed height for Grid 2 and 4 */
+        .talk-entry {
+            background-color: #f1f1f1;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 8px;
         }
 
         .research-box img {
-            width: 100%; /* Image width fills the container */
-            max-width: 300px; /* Set a maximum width */
+            width: 100%; /* Set image width to fill its container */
+            max-width: 300px; /* Maximum width for larger images */
             height: auto; /* Maintain aspect ratio */
-            object-fit: cover; /* Ensure images cover the allocated space */
             border-radius: 8px;
-            margin: 0 auto;
+            margin: 0 auto; /* Center align the image within its grid cell */
+        }
+
+
+        .research-box img {
+            max-width: 90%; /* Image size */
+            border-radius: 8px;
         }
 
         .research-box h3 {
-            grid-column: span 2; /* Span across the full width of the grid */
+            grid-column: span 2;
             text-align: center;
             background-color: #00853E;
             color: white;
             padding: 10px;
-            font-size: 18px;
-            border-radius: 10px 10px 0 0; /* Rounded corners on the top */
+            border-radius: 8px;
         }
 
-        .research-box ul {
-            margin: 0;
-            list-style: square;
-            padding-left: 20px;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        .research-box p {
-            margin: 0;
-            font-size: 14px;
-            text-align: center;
-        }
-
-                .research-box p, ul {
+        .research-box p, ul {
             margin: 0;
             font-size: 14px;
             line-height: 1.6;
@@ -129,36 +112,22 @@
             display: flex;
         }
 
-
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #00853E;
-            color: white;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-
-        /* Mobile Adjustments */
         @media (max-width: 768px) {
-            main {
-                grid-template-columns: 1fr; /* Single column for small screens */
+            .header-container, footer {
+                padding: 10px;
             }
 
-            .research-box {
-                grid-template-columns: 1fr; /* Stack image and text vertically */
-                height: auto; /* Allow content to adjust height */
+            /* Show dropdown button on mobile */
+            .dropdown-menu-button {
+                display: block;
             }
 
-            .research-box img {
-                width: 200px; /* Smaller size for mobile */
-                height: auto;
+            nav ul {
+                display: none; /* Hide regular navigation */
             }
         }
     </style>
 </head>
-
 <body>
     <header class="header-container">
         <div class="header-content">
@@ -187,8 +156,8 @@
                 <a href="contact.html">Contact Us</a>
             </div>
         </div>
-        <main>
     </header>
+    <main>
         <!-- Research Box 1 -->
         <div class="research-box">
             <h3>Data Quality</h3>
@@ -203,7 +172,7 @@
         </div>
 
         <!-- Research Box 2 -->
-        <div class="research-box large">
+        <div class="research-box">
             <h3>Edge Computing based Optimization</h3>
             <img src="Edge_Opt.jpg" alt="Research Image 2" style="grid-column: span 2;">
             <p style="text-align: center;">A key point about this research topic goes here.</p>
@@ -221,17 +190,18 @@
                 </ul>
             </div>
         </div>
-
-        <!-- Research Box 4 -->
-        <div class="research-box large">
+         <!-- Research Box 4 -->
+        <div class="research-box">
             <h3>Security</h3>
             <img src="image2.jpg" alt="Research Image 4" style="grid-column: span 2;">
             <p style="text-align: center;">A key point about this research topic goes here.</p>
         </div>
+        
     </main>
 
     <footer>
         <p>© 2024 SRIS LAB. All Rights Reserved.</p>
     </footer>
 </body>
+
 </html>
