@@ -6,90 +6,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SRIS LAB</title>
     <link rel="stylesheet" href="styles.css">
+
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+    body, html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .header-container {
+        background-color: #00853E;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    main {
+        padding: 20px;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .grants-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Single column by default */
+        gap: 20px; /* Space between sections */
+    }
+
+    .grants-section {
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .active-grants {
+        background-color: #e0f7fa; /* Light blue for active grants */
+    }
+
+    .past-grants {
+        background-color: #ffe0b2; /* Light orange for past grants */
+    }
+
+    .grants-section h3 {
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .grants-section ul {
+        list-style: none; /* Remove bullets */
+        padding: 0;
+    }
+
+    .grants-section li {
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px 0;
+        background-color: #00853E;
+        color: white;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    /* Adjust layout for larger screens */
+    @media (min-width: 768px) {
+        .grants-container {
+            grid-template-columns: 1fr 1fr; /* Two columns for larger screens */
         }
+    }
+</style>
 
-        .header-container {
-            background-color: #00853E;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 960px;
-            margin: 0 auto;
-        }
 
-        main {
-            display: grid;
-            grid-template-columns: 1fr; /* Single column for better focus */
-            padding: 20px;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-
-        .talk-entry {
-            background-color: #f1f1f1;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 8px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #00853E;
-            color: white;
-            max-width: 960px;
-            margin: 0 auto;
-        }
-
-        /* Dropdown styling for mobile view */
-        .dropdown-menu-button {
-            display: none; /* Hidden by default */
-            background-color: #00853E;
-            color: white;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-
-        .dropdown-content {
-            display: none;
-            flex-direction: column;
-            background-color: #00853E;
-            width: 100%;
-        }
-
-        .dropdown-content a {
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            text-align: center;
-            display: block;
-        }
-
-        .dropdown-content.show {
-            display: flex;
-        }
-
-        @media (max-width: 768px) {
-            .header-container, footer {
-                padding: 10px;
-            }
-
-            /* Show dropdown button on mobile */
-            .dropdown-menu-button {
-                display: block;
-            }
-
-            nav ul {
-                display: none; /* Hide regular navigation */
-            }
-        }
-    </style>
 </head>
 
 <body>
