@@ -41,15 +41,14 @@
             border-radius: 8px;
         }
 
-        .research-box {
-            display: grid;
-            grid-template-columns: 1fr 2fr; /* Image and text layout */
-            padding: 20px;
+        .research-box img {
+            width: 100%; /* Set image width to fill its container */
+            max-width: 300px; /* Maximum width for larger images */
+            height: auto; /* Maintain aspect ratio */
             border-radius: 8px;
-            background-color: #f9f9f9;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            align-items: center;
+            margin: 0 auto; /* Center align the image within its grid cell */
         }
+
 
         .research-box img {
             max-width: 90%; /* Image size */
