@@ -1,207 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SRIS LAB</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SRIS LAB</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body,
+    html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
-        .header-container {
-            background-color: #00853E;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 960px;
-            margin: 0 auto;
-        }
+    .header-container {
+      background-color: #00853E;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 960px;
+      margin: 0 auto;
+    }
 
-        main {
-            display: grid;
-            grid-template-columns: 1fr; /* Single column for better focus */
-            padding: 20px;
-            max-width: 960px;
-            margin: 0 auto;
-        }
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
 
-        .talk-entry {
-            background-color: #f1f1f1;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 8px;
-        }
+    .research-box {
+      background-color: #f1f1f1;
+      border-radius: 8px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 400px;
+      box-sizing: border-box;
+    }
 
-        .research-box img {
-            width: 100%; /* Set image width to fill its container */
-            max-width: 300px; /* Maximum width for larger images */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 8px;
-            margin: 0 auto; /* Center align the image within its grid cell */
-        }
+    .research-box h3 {
+      text-align: center;
+      background-color: #00853E;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
 
+    .research-box img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
 
-        .research-box img {
-            max-width: 90%; /* Image size */
-            border-radius: 8px;
-        }
+    .research-box p,
+    .research-box ul {
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0;
+    }
 
-        .research-box h3 {
-            grid-column: span 2;
-            text-align: center;
-            background-color: #00853E;
-            color: white;
-            padding: 10px;
-            border-radius: 8px;
-        }
+    .research-box ul {
+      list-style: square;
+      padding-left: 20px;
+    }
 
-        .research-box p, ul {
-            margin: 0;
-            font-size: 14px;
-            line-height: 1.6;
-        }
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #00853E;
+      color: white;
+      max-width: 960px;
+      margin: 0 auto;
+    }
 
-        .research-box ul {
-            list-style: square;
-            padding-left: 20px;
-        }
+    /* Navigation styles */
+    .nav-links {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+    }
 
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background-color: #00853E;
-            color: white;
-            max-width: 960px;
-            margin: 0 auto;
-        }
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        /* Dropdown styling for mobile view */
-        .dropdown-menu-button {
-            display: none; /* Hidden by default */
-            background-color: #00853E;
-            color: white;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
+    .nav-links .active {
+      text-decoration: underline;
+    }
 
-        .dropdown-content {
-            display: none;
-            flex-direction: column;
-            background-color: #00853E;
-            width: 100%;
-        }
+    /* Dropdown styling for mobile view */
+    .dropdown-menu-button {
+      display: none;
+      background-color: #00853E;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
 
-        .dropdown-content a {
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            text-align: center;
-            display: block;
-        }
+    .dropdown-content {
+      display: none;
+      flex-direction: column;
+      background-color: #00853E;
+      width: 100%;
+    }
 
-        .dropdown-content.show {
-            display: flex;
-        }
+    .dropdown-content a {
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      text-align: center;
+    }
 
-        @media (max-width: 768px) {
-            .header-container, footer {
-                padding: 10px;
-            }
+    .dropdown-content.show {
+      display: flex;
+    }
 
-            /* Show dropdown button on mobile */
-            .dropdown-menu-button {
-                display: block;
-            }
+    @media (max-width: 768px) {
+      .header-container,
+      footer {
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-            nav ul {
-                display: none; /* Hide regular navigation */
-            }
-        }
-    </style>
+      .dropdown-menu-button {
+        display: block;
+      }
+
+      nav ul {
+        display: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header class="header-container">
-        <div class="header-content">
-            <a href="index.html">
-                <img src="Logo_Final.jpg" alt="SRIS Lab Icon" class="icon">
-            </a>
-            <nav aria-label="Main Navigation">
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="people.html">People</a></li>
-                    <li><a href="publication.html">Publications</a></li>
-                    <li><a href="grants.html">Grants</a></li>
-                    <li><a href="research.html" class="active">Research</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
+  <header class="header-container">
+    <a href="index.html">
+      <img src="Logo_Final.jpg" alt="SRIS Lab Icon" class="icon" style="height: 50px;" />
+    </a>
+    <nav aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="people.html">People</a></li>
+        <li><a href="publication.html">Publications</a></li>
+        <li><a href="grants.html">Grants</a></li>
+        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
 
-            <!-- Dropdown menu for mobile view -->
-            <div class="dropdown-menu-button" onclick="toggleDropdown()">Menu</div>
-            <div class="dropdown-content" id="dropdown-menu">
-                <a href="index.html">Home</a>
-                <a href="people.html">People</a>
-                <a href="publication.html">Publications</a>
-                <a href="grants.html">Grants</a>
-                <a href="research.html" class="active">Research</a>
-                <a href="contact.html">Contact Us</a>
-            </div>
-        </div>
-    </header>
-    <main>
-        <!-- Research Box 1 -->
-        <div class="research-box">
-            <h3>Data Quality</h3>
-            <img src="Data_Quality.jpg" alt="Research Image 1">
-            <div>
-                <ul>
-                    <li>Point 1 about the research topic.</li>
-                    <li>Point 2 explaining the focus.</li>
-                    <li>Point 3 with key findings.</li>
-                </ul>
-            </div>
-        </div>
+    <div class="dropdown-menu-button" onclick="toggleDropdown()">Menu</div>
+    <div class="dropdown-content" id="dropdown-menu">
+      <a href="index.html">Home</a>
+      <a href="people.html">People</a>
+      <a href="publication.html">Publications</a>
+      <a href="grants.html">Grants</a>
+      <a href="research.html" class="active">Research</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </header>
 
-        <!-- Research Box 2 -->
-        <div class="research-box">
-            <h3>Edge Computing based Optimization</h3>
-            <img src="Edge_Opt.jpg" alt="Research Image 2" style="grid-column: span 2;">
-            <p style="text-align: center;">A key point about this research topic goes here.</p>
-        </div>
+  <main>
+    <div class="research-box">
+      <h3>Data Quality</h3>
+      <img src="Data_Quality.jpg" alt="Research Image 1" />
+      <ul>
+        <li>Point 1 about the research topic.</li>
+        <li>Point 2 explaining the focus.</li>
+        <li>Point 3 with key findings.</li>
+      </ul>
+    </div>
 
-        <!-- Research Box 3 -->
-        <div class="research-box">
-            <h3>Blockchain Framework</h3>
-            <img src="image3.jpg" alt="Research Image 3">
-            <div>
-                <p>This research focuses on:</p>
-                <ul>
-                    <li>Key area 1</li>
-                    <li>Key area 2</li>
-                </ul>
-            </div>
-        </div>
-         <!-- Research Box 4 -->
-        <div class="research-box">
-            <h3>Security</h3>
-            <img src="image2.jpg" alt="Research Image 4" style="grid-column: span 2;">
-            <p style="text-align: center;">A key point about this research topic goes here.</p>
-        </div>
-        
-    </main>
+    <div class="research-box">
+      <h3>Edge Computing based Optimization</h3>
+      <img src="Edge_Opt.jpg" alt="Research Image 2" />
+      <p>A key point about this research topic goes here.</p>
+    </div>
 
-    <footer>
-        <p>© 2024 SRIS LAB. All Rights Reserved.</p>
-    </footer>
+    <div class="research-box">
+      <h3>Blockchain Framework</h3>
+      <img src="image3.jpg" alt="Research Image 3" />
+      <div>
+        <p>This research focuses on:</p>
+        <ul>
+          <li>Key area 1</li>
+          <li>Key area 2</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="research-box">
+      <h3>Security</h3>
+      <img src="image2.jpg" alt="Research Image 4" />
+      <p>A key point about this research topic goes here.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2024 SRIS LAB. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleDropdown() {
+      const menu = document.getElementById("dropdown-menu");
+      menu.classList.toggle("show");
+    }
+  </script>
 </body>
 
 </html>
