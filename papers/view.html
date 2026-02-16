@@ -12,10 +12,7 @@
   </style>
 </head>
 <body>
-  <header>
-    <span id="name">Loading…</span>
-  </header>
-
+  <header><span id="name">Loading…</span></header>
   <iframe id="frame"></iframe>
 
   <script>
@@ -29,8 +26,12 @@
       nameEl.textContent = "Missing ?file=...pdf";
     } else {
       nameEl.textContent = file;
-      // Use same-folder relative path
-      frame.src = "./" + encodeURIComponent(file);
+
+      // Build an absolute URL to the PDF in the same folder
+      const pdfUrl = new URL("./" + file, location.href).toString();
+
+      // Google viewer renders PDFs reliably in an iframe
+      frame.src = "https://docs.google.com/gview?embedded=1&url=" + encodeURIComponent(pdfUrl);
     }
   </script>
 </body>
