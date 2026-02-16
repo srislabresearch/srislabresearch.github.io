@@ -3,32 +3,28 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Paper Viewer</title>
+  <title>Paper</title>
   <style>
     html, body { height: 100%; margin: 0; }
-    header { padding: 10px 14px; font-family: Arial, sans-serif; border-bottom: 1px solid #ddd; }
-    #name { font-weight: 600; }
-    iframe { width: 100%; height: calc(100% - 48px); border: 0; }
+    iframe { width: 100%; height: 100%; border: 0; display: block; }
   </style>
 </head>
 <body>
-  <header><span id="name">Loading…</span></header>
   <iframe id="frame"></iframe>
 
   <script>
     const params = new URLSearchParams(location.search);
     const file = params.get("file");
 
-    const nameEl = document.getElementById("name");
-    const frame = document.getElementById("frame");
-
     if (!file) {
-      nameEl.textContent = "Missing ?file=...pdf";
+      document.body.innerHTML =
+        "<p style='font-family:Arial;padding:16px'>Missing ?file=...pdf</p>";
     } else {
-      nameEl.textContent = file;
+      // This shows the browser's built-in PDF viewer (with zoom/print/download)
+      document.getElementById("frame").src = "./" + encodeURIComponent(file);
 
-      // Load the PDF from the same folder
-      frame.src = "./" + encodeURIComponent(file);
+      // Keep the tab title simple
+      document.title = "Paper";
     }
   </script>
 </body>
