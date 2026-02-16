@@ -27,11 +27,8 @@
     } else {
       nameEl.textContent = file;
 
-      // Build an absolute URL to the PDF in the same folder
-      const pdfUrl = new URL("./" + file, location.href).toString();
-
-      // Google viewer renders PDFs reliably in an iframe
-      frame.src = "https://docs.google.com/gview?embedded=1&url=" + encodeURIComponent(pdfUrl);
+      // Load the PDF from the same folder
+      frame.src = "./" + encodeURIComponent(file);
     }
   </script>
 </body>
